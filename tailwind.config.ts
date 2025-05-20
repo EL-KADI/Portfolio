@@ -1,0 +1,101 @@
+import type { Config } from "tailwindcss"
+
+const config: Config = {
+  darkMode: ["class"],
+  content: [
+    "app/**/*.{ts,tsx}",
+    "components/**/*.{ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+          50: "#f0f7ff",
+          100: "#e0eefe",
+          200: "#bae0fd",
+          300: "#7cc8fb",
+          400: "#36aaf7",
+          500: "#0d8de3",
+          600: "#0270c3",
+          700: "#025a9e",
+          800: "#064b83",
+          900: "#0a406d",
+          950: "#072a4a",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+          50: "#f5f7fa",
+          100: "#ebeef3",
+          200: "#d2dae5",
+          300: "#acbcce",
+          400: "#8097b3",
+          500: "#5f7a9a",
+          600: "#4a6281",
+          700: "#3d5069",
+          800: "#354559",
+          900: "#303c4c",
+          950: "#1e2631",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+          50: "#f5f9ff",
+          100: "#ebf3ff",
+          200: "#d6e7ff",
+          300: "#b5d5ff",
+          400: "#8abbff",
+          500: "#5a9eff",
+          600: "#3a7ff7",
+          700: "#2667e5",
+          800: "#2253ba",
+          900: "#214893",
+          950: "#172b5a",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
+        float: "float 6s ease-in-out infinite",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
+export default config
