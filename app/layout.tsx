@@ -45,6 +45,14 @@ export const metadata: Metadata = {
     "بورتفوليو مطور ويب",
     "مطور واجهة مستخدم",
   ],
+  metadataBase: new URL("https://sayedragheb.vercel.app/"),
+  openGraph: {
+    title: "Sayed Ragheb | Front-End Developer",
+    description:
+      "Hi, I'm Sayed Ragheb — a front-end developer showcasing modern, responsive web projects built with React, Next.js, and a wide range of UI tools.",
+    url: "https://sayedragheb.vercel.app/",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
