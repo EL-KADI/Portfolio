@@ -1,17 +1,21 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { useFrame } from "@react-three/fiber"
-import { Text, Float, Html } from "@react-three/drei"
-import type { Group } from "three"
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Text, Float, Html } from "@react-three/drei";
+import type { Group } from "three";
+import { Vector3 } from "three";
 
 interface ProjectsShowcaseProps {
-  position: [number, number, number]
-  scale: number
+  position: Vector3 | [number, number, number];
+  scale: number;
 }
 
-export default function ProjectsShowcase({ position, scale }: ProjectsShowcaseProps) {
-  const showcaseRef = useRef<Group>(null)
+export default function ProjectsShowcase({
+  position,
+  scale,
+}: ProjectsShowcaseProps) {
+  const showcaseRef = useRef<Group>(null);
 
   const projects = [
     {
@@ -19,7 +23,7 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       description:
         "A fully responsive social media platform built with Next.js and MUI. Features user authentication, dynamic Home Feed, and interactive user profiles.",
       color: "#ff7675",
-      position: [-4, 0, 0],
+      position: [-4, 0, 0] as [number, number, number], // تحديد النوع صراحة
       url: "https://yonna.vercel.app/signin",
       code: "https://github.com/EL-KADI/Yonna",
     },
@@ -28,7 +32,7 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       description:
         "A fully integrated e-commerce website with Login and Home Page. Dynamically fetches content from APIs, offering products, deals, and discounts.",
       color: "#74b9ff",
-      position: [-2, 0, 2],
+      position: [-2, 0, 2] as [number, number, number],
       url: "https://fresh-cart-virid-beta.vercel.app/",
       code: "https://github.com/EL-KADI/FreshCart-E-commerce-App",
     },
@@ -37,7 +41,7 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       description:
         "An Arab heritage platform with 49 categories of traditional tips and folk recipes. Users can submit their own tips, celebrating Egyptian, Gulf, and Levantine traditions.",
       color: "#55efc4",
-      position: [0, 0, 3],
+      position: [0, 0, 3] as [number, number, number],
       url: "https://nasaehgedety.vercel.app/",
       code: "https://github.com/EL-KADI/Nasaeh-Gedety",
     },
@@ -46,7 +50,7 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       description:
         "A platform for creating custom digital cards such as greeting cards, invitations, and business cards with flexible customization options.",
       color: "#a29bfe",
-      position: [2, 0, 2],
+      position: [2, 0, 2] as [number, number, number],
       url: "https://digital-card-creator-nine.vercel.app",
       code: "https://github.com/EL-KADI/Digital-Card-Creator",
     },
@@ -55,15 +59,16 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       description:
         "An interactive app for exploring educational videos with modern UI, dark mode, advanced dashboard, favorites list, and video playback.",
       color: "#ffeaa7",
-      position: [4, 0, 0],
+      position: [4, 0, 0] as [number, number, number],
       url: "https://video-quest.vercel.app/",
       code: "https://github.com/EL-KADI/VideoQuest",
     },
     {
       title: "Podcast Finder",
-      description: "An app to search and explore podcast information with featured podcasts section and modern UI.",
+      description:
+        "An app to search and explore podcast information with featured podcasts section and modern UI.",
       color: "#fab1a0",
-      position: [2, 0, -2],
+      position: [2, 0, -2] as [number, number, number],
       url: "https://podcast-finder-seven.vercel.app/",
       code: "https://github.com/EL-KADI/Podcast-Finder",
     },
@@ -72,7 +77,7 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       description:
         "A song recognition platform that identifies songs by recording audio or uploading files using the audd.io API.",
       color: "#81ecec",
-      position: [0, 0, -3],
+      position: [0, 0, -3] as [number, number, number],
       url: "https://auddtune.vercel.app/",
       code: "https://github.com/EL-KADI/AuddTune",
     },
@@ -81,7 +86,7 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       description:
         "A patient management dashboard with authentication, treatment plans, appointments, and surgical cases management.",
       color: "#fd79a8",
-      position: [-2, 0, -2],
+      position: [-2, 0, -2] as [number, number, number],
       url: "https://abdullah-clinic-system.vercel.app/#/",
       code: "https://github.com/EL-KADI/Abdullah-Clinic-System",
     },
@@ -90,25 +95,26 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       description:
         "A responsive movie rating website showcasing top-rated and lowest-rated films using real-time data from APIs.",
       color: "#e84393",
-      position: [-3, 0, -1],
+      position: [-3, 0, -1] as [number, number, number],
       url: "https://movie-nest-ten.vercel.app/",
       code: "https://github.com/EL-KADI/MovieNest",
     },
     {
       title: "GamePlex",
-      description: "A web page showcasing games with a 3D-designed interface and user authentication system.",
+      description:
+        "A web page showcasing games with a 3D-designed interface and user authentication system.",
       color: "#00cec9",
-      position: [3, 0, -1],
+      position: [3, 0, -1] as [number, number, number],
       url: "https://gameplex-theta.vercel.app/",
       code: "https://github.com/EL-KADI/GamePlex",
     },
-  ]
+  ];
 
   useFrame((state) => {
     if (showcaseRef.current) {
-      showcaseRef.current.rotation.y = state.clock.elapsedTime * 0.05
+      showcaseRef.current.rotation.y = state.clock.elapsedTime * 0.05;
     }
-  })
+  });
 
   return (
     <group position={position} scale={scale} ref={showcaseRef}>
@@ -124,17 +130,35 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
       </Text>
 
       {projects.map((project, index) => (
-        <Float key={index} speed={1} rotationIntensity={0.2} floatIntensity={0.3}>
+        <Float
+          key={index}
+          speed={1}
+          rotationIntensity={0.2}
+          floatIntensity={0.3}
+        >
           <group position={project.position}>
             <mesh castShadow receiveShadow>
               <boxGeometry args={[1.8, 1.2, 0.1]} />
-              <meshStandardMaterial color={project.color} metalness={0.2} roughness={0.8} />
+              <meshStandardMaterial
+                color={project.color}
+                metalness={0.2}
+                roughness={0.8}
+              />
             </mesh>
 
-            <Html transform distanceFactor={10} position={[0, 0, 0.06]} className="w-48">
+            <Html
+              transform
+              distanceFactor={10}
+              position={[0, 0, 0.06]}
+              className="w-48"
+            >
               <div className="bg-black/90 p-3 rounded-md text-white">
-                <h3 className="text-sm font-bold mb-1 text-center">{project.title}</h3>
-                <p className="text-xs mb-2 line-clamp-3">{project.description}</p>
+                <h3 className="text-sm font-bold mb-1 text-center">
+                  {project.title}
+                </h3>
+                <p className="text-xs mb-2 line-clamp-3">
+                  {project.description}
+                </p>
                 <div className="flex justify-between text-xs">
                   <a
                     href={project.url}
@@ -159,5 +183,5 @@ export default function ProjectsShowcase({ position, scale }: ProjectsShowcasePr
         </Float>
       ))}
     </group>
-  )
+  );
 }

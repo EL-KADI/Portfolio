@@ -16,10 +16,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
   min-height: 100vh;
 }
-
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -38,16 +41,13 @@ body {
   background: linear-gradient(to bottom, #2563eb, #7c3aed);
 }
 
-
 .perspective-1000 {
   perspective: 1000px;
 }
 
-
 .transform-style-3d {
   transform-style: preserve-3d;
 }
-
 
 .translate-z-16 {
   transform: translateZ(4rem);
@@ -93,7 +93,6 @@ body {
   transform: rotateX(-90deg);
 }
 
-
 .gradient-text {
   background: linear-gradient(to right, #3b82f6, #8b5cf6);
   -webkit-background-clip: text;
@@ -132,7 +131,6 @@ body {
   animation: rotate3d 10s linear infinite;
 }
 
-
 .card-hover {
   transition: all 0.3s ease;
 }
@@ -141,3 +139,4 @@ body {
   transform: translateY(-10px) rotateY(5deg);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
+

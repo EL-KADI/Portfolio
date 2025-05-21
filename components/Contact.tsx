@@ -47,7 +47,7 @@ export default function Contact() {
     const email = formData.email.trim()
     const message = formData.message.trim()
 
-    // Validate form
+   
     if (name.length < 3) {
       addToast("The name must be at least 3 characters long.", "error")
       setIsSubmitting(false)
@@ -66,7 +66,7 @@ export default function Contact() {
       return
     }
 
-    // Use emailjs to send the form
+    
     if (window.emailjs) {
       window.emailjs
         .send(
@@ -91,7 +91,7 @@ export default function Contact() {
           },
         )
     } else {
-      // Fallback if emailjs is not loaded
+      
       console.error("EmailJS not loaded")
       addToast("Email service not available. Please try again later.", "error")
       setIsSubmitting(false)

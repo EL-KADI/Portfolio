@@ -12,7 +12,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import { motion, useScroll, useSpring } from "framer-motion";
-
+import "@/styles/globals.css";
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [mounted, setMounted] = useState(false);
@@ -45,13 +45,6 @@ export default function Home() {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
-
-    toast({
-      title: `${
-        newTheme.charAt(0).toUpperCase() + newTheme.slice(1)
-      } Mode Activated`,
-      description: `Switched to ${newTheme} mode.`,
-    });
   };
 
   const scrollToSection = (id: string) => {
@@ -90,7 +83,7 @@ export default function Home() {
 
         <nav className="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
           <div className="container mx-auto px-4 py-3">
-            <ul className="flex justify-center space-x-8">
+            <ul className="flex justify-center sm:space-x-8 custom-media space-x-4 text-sm sm:text-[16px]">
               {["Home", "Skills", "Projects", "Certificates", "Contact"].map(
                 (item) => (
                   <li key={item}>

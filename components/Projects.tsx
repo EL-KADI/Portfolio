@@ -350,7 +350,7 @@ export default function Projects() {
       </motion.div>
 
       <Tabs defaultValue="featured" className="mb-12">
-        <TabsList className="mx-auto flex justify-center mb-8">
+        <TabsList className="mx-auto flex justify-center mb-8 dark:bg-[#0e1422]">
           <TabsTrigger
             value="featured"
             className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-500 data-[state=active]:to-purple-600 data-[state=active]:text-white"

@@ -1,19 +1,31 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { useFrame } from "@react-three/fiber"
-import { Text, Float, Html } from "@react-three/drei"
-import type { Group } from "three"
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Text, Float, Html } from "@react-three/drei";
+import type { Group } from "three";
+import { Vector3 } from "three";
 
 interface CertificatesDisplayProps {
-  position: [number, number, number]
-  scale: number
+  position: Vector3 | [number, number, number];
+  scale: number;
 }
 
-export default function CertificatesDisplay({ position, scale }: CertificatesDisplayProps) {
-  const displayRef = useRef<Group>(null)
+interface Certificate {
+  name: string;
+  description: string;
+  color: string;
+  position: Vector3 | [number, number, number];
+  pdf: string;
+}
 
-  const certificates = [
+export default function CertificatesDisplay({
+  position,
+  scale,
+}: CertificatesDisplayProps) {
+  const displayRef = useRef<Group>(null);
+
+  const certificates: Certificate[] = [
     {
       name: "Meta Certificate",
       description: "Front-End Development Certificate from Meta (Facebook)",
@@ -23,18 +35,20 @@ export default function CertificatesDisplay({ position, scale }: CertificatesDis
     },
     {
       name: "Route Certificate",
-      description: "Web Development Professional Certificate from Route Academy",
+      description:
+        "Web Development Professional Certificate from Route Academy",
       color: "#ff9900",
       position: [2, 0, 0],
       pdf: "/CV/Route Diploma.pdf",
     },
-  ]
+  ];
 
   useFrame((state) => {
     if (displayRef.current) {
-      displayRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.2
+      displayRef.current.rotation.y =
+        Math.sin(state.clock.elapsedTime * 0.3) * 0.2;
     }
-  })
+  });
 
   return (
     <group position={position} scale={scale} ref={displayRef}>
@@ -50,11 +64,20 @@ export default function CertificatesDisplay({ position, scale }: CertificatesDis
       </Text>
 
       {certificates.map((certificate, index) => (
-        <Float key={index} speed={1.5} rotationIntensity={0.3} floatIntensity={0.4}>
+        <Float
+          key={index}
+          speed={1.5}
+          rotationIntensity={0.3}
+          floatIntensity={0.4}
+        >
           <group position={certificate.position}>
             <mesh castShadow receiveShadow>
               <boxGeometry args={[3, 2, 0.1]} />
-              <meshStandardMaterial color={certificate.color} metalness={0.3} roughness={0.7} />
+              <meshStandardMaterial
+                color={certificate.color}
+                metalness={0.3}
+                roughness={0.7}
+              />
             </mesh>
 
             <mesh position={[0, 0, 0.06]}>
@@ -62,10 +85,19 @@ export default function CertificatesDisplay({ position, scale }: CertificatesDis
               <meshStandardMaterial color="#ffffff" />
             </mesh>
 
-            <Html transform distanceFactor={10} position={[0, 0, 0.12]} className="w-64">
+            <Html
+              transform
+              distanceFactor={10}
+              position={[0, 0, 0.12]}
+              className="w-64"
+            >
               <div className="bg-white/90 p-4 rounded text-center">
-                <h3 className="text-lg font-bold mb-2 text-gray-900">{certificate.name}</h3>
-                <p className="text-sm mb-3 text-gray-700">{certificate.description}</p>
+                <h3 className="text-lg font-bold mb-2 text-gray-900">
+                  {certificate.name}
+                </h3>
+                <p className="text-sm mb-3 text-gray-700">
+                  {certificate.description}
+                </p>
                 <a
                   href={certificate.pdf}
                   target="_blank"
@@ -80,5 +112,5 @@ export default function CertificatesDisplay({ position, scale }: CertificatesDis
         </Float>
       ))}
     </group>
-  )
+  );
 }
