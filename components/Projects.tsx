@@ -34,6 +34,7 @@ import auddtuneimage from "../Images/auddtuneimage.png";
 import DigitalCardCreator from "../Images/Digital Card Creator.png";
 import VideoQuest from "../Images/VideoQuest.png";
 import PodcastFinder from "../Images/Podcast Finder.png";
+import Cartify from "../Images/Cartify.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -50,13 +51,13 @@ export default function Projects() {
       featured: true,
     },
     {
-      title: "FreshCart (E-Commerce App)",
+      title: "Cartify (E-Commerce App)",
       description:
-        "This project is a fully integrated e-commerce website with a Login Page and Home Page. It dynamically fetches content from APIs, offering a wide range of products, deals, and discounts. Users can browse items seamlessly, enjoying a clean design and interactive interface.",
-      image: FreshCart,
-      url: "https://fresh-cart-virid-beta.vercel.app/",
-      code: "https://github.com/EL-KADI/FreshCart-E-commerce-App",
-      tags: ["React", "E-commerce", "API Integration", "Authentication"],
+        "This project is a fully integrated e-commerce platform designed to provide a professional and seamless online shopping experience. The site dynamically fetches content from APIs, offering a wide variety of products including the latest deals and exclusive discounts. It features a modern and attractive design with an interactive, responsive interface compatible with all devices. The platform also includes features such as a shopping cart and detailed product views to meet user needs and deliver a comprehensive shopping experience.",
+      image: Cartify,
+      url: "https://cartify-khaki.vercel.app/",
+      code: "https://github.com/EL-KADI/Cartify-E-Commerce-App",
+      tags: ["Next", "E-commerce", "API Integration", "Tailwind CSS"],
       featured: true,
     },
     {
@@ -116,6 +117,15 @@ export default function Projects() {
         "Featured Content",
       ],
       featured: true,
+    },
+    {
+      title: "FreshCart (E-Commerce App)",
+      description:
+        "This project is a fully integrated e-commerce website with a Login Page and Home Page. It dynamically fetches content from APIs, offering a wide range of products, deals, and discounts. Users can browse items seamlessly, enjoying a clean design and interactive interface.",
+      image: FreshCart,
+      url: "https://fresh-cart-virid-beta.vercel.app/",
+      code: "https://github.com/EL-KADI/FreshCart-E-commerce-App",
+      tags: ["React", "E-commerce", "API Integration", "Authentication"],
     },
     {
       title: "AuddTune",
