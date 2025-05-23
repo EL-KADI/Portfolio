@@ -37,6 +37,7 @@ import PodcastFinder from "../Images/Podcast Finder.png";
 import Cartify from "../Images/Cartify.png";
 import BitPulse from "../Images/BitPulse.png";
 import spark from "../Images/spark.png";
+import GoVents from "../Images/GoVents.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -118,7 +119,6 @@ export default function Projects() {
         "Search",
         "Featured Content",
       ],
-      
     },
     {
       title: "FreshCart (E-Commerce App)",
@@ -130,15 +130,22 @@ export default function Projects() {
       tags: ["React", "E-commerce", "API Integration", "Authentication"],
     },
     {
-  title: "BitPulse",
-  description:
-    "BitPulse is a financial data platform built with Next.js and Tailwind CSS. It provides real-time and historical price data for traditional currencies (e.g., USD/EGP) and cryptocurrencies (e.g., Bitcoin, Ethereum). The platform utilizes ExchangeRate-API for currency exchange rates and CoinGecko API for crypto prices, displayed through interactive Chart.js visualizations. It features a clean, responsive interface with a currency converter and time-range filters for data analysis.",
-  image: BitPulse, 
-  url: "https://bit-pulse-iota.vercel.app/", 
-  code: "https://github.com/EL-KADI/BitPulse", 
-  tags: ["Next.js", "Tailwind CSS", "Chart.js", "Finance", "Cryptocurrency", "Currency Exchange"],
-  featured: true,
-},
+      title: "BitPulse",
+      description:
+        "BitPulse is a financial data platform built with Next.js and Tailwind CSS. It provides real-time and historical price data for traditional currencies (e.g., USD/EGP) and cryptocurrencies (e.g., Bitcoin, Ethereum). The platform utilizes ExchangeRate-API for currency exchange rates and CoinGecko API for crypto prices, displayed through interactive Chart.js visualizations. It features a clean, responsive interface with a currency converter and time-range filters for data analysis.",
+      image: BitPulse,
+      url: "https://bit-pulse-iota.vercel.app/",
+      code: "https://github.com/EL-KADI/BitPulse",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Chart.js",
+        "Finance",
+        "Cryptocurrency",
+        "Currency Exchange",
+      ],
+      featured: true,
+    },
     {
       title: "AuddTune",
       description:
@@ -149,27 +156,13 @@ export default function Projects() {
       tags: ["React", "Tailwind CSS", "Audio API", "Music", "Song Recognition"],
     },
     {
-  "title": "Spark",
-  "description": "Spark is a news aggregation platform built with Next.Js and Tailwind CSS. It enables users to access real-time news from global and Arabic sources, such as Al Jazeera and BBC Arabic, using the NewsAPI. The platform offers a sleek, user-friendly interface to browse, search, and filter news articles by topics like technology, politics, or sports, with support for Arabic and English content.",
-  "image": spark,
-  "url": "https://spark-theta-five.vercel.app/",
-  "code": "https://github.com/EL-KADI/Spark",
-  "tags": ["Next.Js", "Tailwind CSS", "NewsAPI", "Real-time Data"]
-},
-    {
-      title: "DR. Abdullah Clinic System",
+      title: "Spark",
       description:
-        "Dr. Abdullah's Clinic is a patient management dashboard built with React and Tailwind CSS. It offers secure local storage-based authentication without APIs, providing login, registration, and patient management. Users can add treatment plans, appointments, and surgical cases. The dashboard displays patient details, medical history, and upcoming appointments, ensuring efficient clinic management.",
-      image: abdullahclinicsystem,
-      url: "https://abdullah-clinic-system.vercel.app/#/",
-      code: "https://github.com/EL-KADI/Abdullah-Clinic-System",
-      tags: [
-        "React",
-        "Tailwind CSS",
-        "Healthcare",
-        "Dashboard",
-        "Local Storage",
-      ],
+        "Spark is a news aggregation platform built with Next.Js and Tailwind CSS. It enables users to access real-time news from global and Arabic sources, such as Al Jazeera and BBC Arabic, using the NewsAPI. The platform offers a sleek, user-friendly interface to browse, search, and filter news articles by topics like technology, politics, or sports, with support for Arabic and English content.",
+      image: spark,
+      url: "https://spark-theta-five.vercel.app/",
+      code: "https://github.com/EL-KADI/Spark",
+      tags: ["Next.Js", "Tailwind CSS", "NewsAPI", "Real-time Data"],
     },
     {
       title: "MovieNest",
@@ -195,6 +188,37 @@ export default function Projects() {
         "User Experience",
       ],
     },
+    {
+      title: "GoVents",
+      description:
+        "GoVents is an event discovery platform built with React, Tailwind CSS, and Axios. It allows users to explore local events like concerts, exhibitions, and festivals using the Ticketmaster Discovery API. The platform provides a responsive, English-only interface to browse all available events by default, search by city or event type (e.g., Music, Sports), and filter by date or cost. Users can save favorites, ensuring a seamless experience.",
+      image: GoVents,
+      url: "https://govents.vercel.app/",
+      code: "https://github.com/EL-KADI/GoVents",
+      tags: [
+        "React",
+        "Tailwind CSS",
+        "Axios",
+        "Ticketmaster API",
+        "Event Discovery",
+      ],
+    },
+    {
+      title: "DR. Abdullah Clinic System",
+      description:
+        "Dr. Abdullah's Clinic is a patient management dashboard built with React and Tailwind CSS. It offers secure local storage-based authentication without APIs, providing login, registration, and patient management. Users can add treatment plans, appointments, and surgical cases. The dashboard displays patient details, medical history, and upcoming appointments, ensuring efficient clinic management.",
+      image: abdullahclinicsystem,
+      url: "https://abdullah-clinic-system.vercel.app/#/",
+      code: "https://github.com/EL-KADI/Abdullah-Clinic-System",
+      tags: [
+        "React",
+        "Tailwind CSS",
+        "Healthcare",
+        "Dashboard",
+        "Local Storage",
+      ],
+    },
+
     {
       title: "NoteApp",
       description:
