@@ -35,6 +35,8 @@ import DigitalCardCreator from "../Images/Digital Card Creator.png";
 import VideoQuest from "../Images/VideoQuest.png";
 import PodcastFinder from "../Images/Podcast Finder.png";
 import Cartify from "../Images/Cartify.png";
+import BitPulse from "../Images/BitPulse.png";
+import spark from "../Images/spark.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -116,7 +118,7 @@ export default function Projects() {
         "Search",
         "Featured Content",
       ],
-      featured: true,
+      
     },
     {
       title: "FreshCart (E-Commerce App)",
@@ -128,6 +130,16 @@ export default function Projects() {
       tags: ["React", "E-commerce", "API Integration", "Authentication"],
     },
     {
+  title: "BitPulse",
+  description:
+    "BitPulse is a financial data platform built with Next.js and Tailwind CSS. It provides real-time and historical price data for traditional currencies (e.g., USD/EGP) and cryptocurrencies (e.g., Bitcoin, Ethereum). The platform utilizes ExchangeRate-API for currency exchange rates and CoinGecko API for crypto prices, displayed through interactive Chart.js visualizations. It features a clean, responsive interface with a currency converter and time-range filters for data analysis.",
+  image: BitPulse, 
+  url: "https://bit-pulse-iota.vercel.app/", 
+  code: "https://github.com/EL-KADI/BitPulse", 
+  tags: ["Next.js", "Tailwind CSS", "Chart.js", "Finance", "Cryptocurrency", "Currency Exchange"],
+  featured: true,
+},
+    {
       title: "AuddTune",
       description:
         "AuddTune is a song recognition platform built with React and Tailwind CSS. It allows users to identify songs by recording audio or uploading an audio file. The platform utilizes the audd.io API for accurate song analysis. It provides an easy-to-use interface to display song information such as the artist's name, song title, and album.",
@@ -136,6 +148,14 @@ export default function Projects() {
       code: "https://github.com/EL-KADI/AuddTune",
       tags: ["React", "Tailwind CSS", "Audio API", "Music", "Song Recognition"],
     },
+    {
+  "title": "Spark",
+  "description": "Spark is a news aggregation platform built with Next.Js and Tailwind CSS. It enables users to access real-time news from global and Arabic sources, such as Al Jazeera and BBC Arabic, using the NewsAPI. The platform offers a sleek, user-friendly interface to browse, search, and filter news articles by topics like technology, politics, or sports, with support for Arabic and English content.",
+  "image": spark,
+  "url": "https://spark-theta-five.vercel.app/",
+  "code": "https://github.com/EL-KADI/Spark",
+  "tags": ["Next.Js", "Tailwind CSS", "NewsAPI", "Real-time Data"]
+},
     {
       title: "DR. Abdullah Clinic System",
       description:
