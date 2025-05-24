@@ -38,6 +38,7 @@ import Cartify from "../Images/Cartify.png";
 import BitPulse from "../Images/BitPulse.png";
 import spark from "../Images/spark.png";
 import GoVents from "../Images/GoVents.png";
+import AstroVerse from "../Images/AstroVerse.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -146,6 +147,22 @@ export default function Projects() {
       ],
       featured: true,
     },
+    {
+  "title": "AstroVerse",
+  "description": "AstroVerse is an interactive space exploration platform built with Next.js, Tailwind CSS, Three.js, and GSAP. It leverages the NASA API to deliver real-time astronomical data, including the Astronomy Picture of the Day (APOD), Mars rover photos, and near-Earth object information. The platform offers a responsive, interface with a 3D planet exploration feature, a kids’ educational section with quizzes, and a space missions showcase. Users can save favorite planets or images and enjoy smooth animations for an immersive experience.",
+  "image":AstroVerse,
+  "url": "https://astro-verse-mu.vercel.app/",
+  "code": "https://github.com/EL-KADI/AstroVerse",
+  "tags": [
+    "Next.js",
+    "Tailwind CSS",
+    "Three.js",
+    "GSAP",
+    "NASA API",
+    "Space Exploration",
+    "Educational"
+  ]
+},
     {
       title: "AuddTune",
       description:
@@ -298,7 +315,6 @@ export default function Projects() {
       tags: [
         "HTML",
         "CSS",
-        "JavaScript",
         "Portfolio",
         "Single-page Application",
       ],
@@ -310,7 +326,7 @@ export default function Projects() {
       image: DevFolio,
       url: "https://devfolio-five-xi.vercel.app/",
       code: "https://github.com/EL-KADI/DevFolio",
-      tags: ["HTML", "CSS", "JavaScript", "Portfolio", "Blog"],
+      tags: ["HTML", "CSS","Portfolio", "Blog"],
     },
     {
       title: "Start Framework",
@@ -319,7 +335,7 @@ export default function Projects() {
       image: StartFramework,
       url: "https://el-kadi.github.io/Start-Framework/",
       code: "https://github.com/EL-KADI/Start-Framework",
-      tags: ["HTML", "CSS", "JavaScript", "Portfolio", "Contact Form"],
+      tags: ["React","Portfolio", "Contact Form"],
     },
     {
       title: "Random Quote Generator",
