@@ -40,6 +40,7 @@ import spark from "../Images/spark.png";
 import GoVents from "../Images/GoVents.png";
 import AstroVerse from "../Images/AstroVerse.png";
 import DreamGarden from "../Images/DreamGarden.png";
+import InkVibe from "../Images/InkVibe.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -164,6 +165,20 @@ export default function Projects() {
     "Educational"
   ]
 },
+{
+  "title": "InkVibe",
+  "description": "InkVibe is a digital library platform built with Next.js, Tailwind CSS, and Swiper.js. It uses the Open Library API to browse and search free books by genre, language, or author. The responsive interface offers a bookshelf, reading lists, a kids’ section with quizzes, and reading stats. Users can save favorites to Local Storage and toggle dark mode.",
+  "image":InkVibe,
+  "url": "https://ink-vibe.vercel.app/",
+  "code": "https://github.com/EL-KADI/InkVibe",
+  "tags": [
+    "Next.js",
+    "Tailwind CSS",
+    "Open Library API",
+    "Digital Library"
+  ]
+},
+
 {
   "title": "DreamGarden",
   "description": "DreamGarden is an interactive virtual plant garden design platform built with Next.js, Tailwind CSS, Three.js, and React-Beautiful-DnD. It enables users to create personalized garden layouts by selecting and arranging plants through a drag-and-drop interface. The platform offers a responsive interface with design export options as images or PDFs. Users can save designs to Local Storage and toggle dark mode for an immersive experience.",
