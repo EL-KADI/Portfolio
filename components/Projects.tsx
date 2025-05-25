@@ -39,6 +39,7 @@ import BitPulse from "../Images/BitPulse.png";
 import spark from "../Images/spark.png";
 import GoVents from "../Images/GoVents.png";
 import AstroVerse from "../Images/AstroVerse.png";
+import DreamGarden from "../Images/DreamGarden.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -163,6 +164,24 @@ export default function Projects() {
     "Educational"
   ]
 },
+{
+  "title": "DreamGarden",
+  "description": "DreamGarden is an interactive virtual plant garden design platform built with Next.js, Tailwind CSS, Three.js, and React-Beautiful-DnD. It enables users to create personalized garden layouts by selecting and arranging plants through a drag-and-drop interface. The platform offers a responsive interface with design export options as images or PDFs. Users can save designs to Local Storage and toggle dark mode for an immersive experience.",
+  "image":DreamGarden,
+  "url": "https://dream-garden-wheat.vercel.app/",
+  "code": "https://github.com/EL-KADI/Dream-Garden",
+  "tags": [
+    "Next.js",
+    "Tailwind CSS",
+    "Three.js",
+    "React-Beautiful-DnD",
+    "Trefle API",
+    "OpenWeatherMap API",
+    "Plant Design",
+    "Interactive"
+  ]
+},
+
     {
       title: "AuddTune",
       description:
