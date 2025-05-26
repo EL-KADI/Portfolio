@@ -42,6 +42,7 @@ import AstroVerse from "../Images/AstroVerse.png";
 import DreamGarden from "../Images/DreamGarden.png";
 import InkVibe from "../Images/InkVibe.png";
 import EraEcho from "../Images/EraEcho.png";
+import SoundVoyage from "../Images/SoundVoyage.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -201,6 +202,19 @@ export default function Projects() {
       code: "https://github.com/EL-KADI/AuddTune",
       tags: ["React", "Tailwind CSS", "Audio API", "Music", "Song Recognition"],
     },
+    {
+  "title": "SoundVoyage",
+  "description": "SoundVoyage is an interactive platform built with Next.js and Tailwind CSS to explore traditional musical instruments from various cultures. Users can select countries through an interactive map, listen to instrument sounds, read stories, and save their favorites. The responsive interface includes a map, a favorites page, educational content, dark mode, and Framer Motion animations.",
+  "image":SoundVoyage,
+  "url": "https://sound-voyage.vercel.app/",
+  "code": "https://github.com/EL-KADI/SoundVoyage",
+  "tags": [
+    "Next.js",
+    "Tailwind CSS",
+    "Music",
+    "Culture"
+  ]
+},
     {
       title: "Spark",
       description:
