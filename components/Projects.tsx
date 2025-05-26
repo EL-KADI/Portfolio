@@ -41,6 +41,7 @@ import GoVents from "../Images/GoVents.png";
 import AstroVerse from "../Images/AstroVerse.png";
 import DreamGarden from "../Images/DreamGarden.png";
 import InkVibe from "../Images/InkVibe.png";
+import EraEcho from "../Images/EraEcho.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -150,53 +151,47 @@ export default function Projects() {
       featured: true,
     },
     {
-  "title": "AstroVerse",
-  "description": "AstroVerse is an interactive space exploration platform built with Next.js, Tailwind CSS, Three.js, and GSAP. It leverages the NASA API to deliver real-time astronomical data, including the Astronomy Picture of the Day (APOD), Mars rover photos, and near-Earth object information. The platform offers a responsive, interface with a 3D planet exploration feature, a kids’ educational section with quizzes, and a space missions showcase. Users can save favorite planets or images and enjoy smooth animations for an immersive experience.",
-  "image":AstroVerse,
-  "url": "https://astro-verse-mu.vercel.app/",
-  "code": "https://github.com/EL-KADI/AstroVerse",
-  "tags": [
-    "Next.js",
-    "Tailwind CSS",
-    "Three.js",
-    "GSAP",
-    "NASA API",
-    "Space Exploration",
-    "Educational"
-  ]
-},
-{
-  "title": "InkVibe",
-  "description": "InkVibe is a digital library platform built with Next.js, Tailwind CSS, and Swiper.js. It uses the Open Library API to browse and search free books by genre, language, or author. The responsive interface offers a bookshelf, reading lists, a kids’ section with quizzes, and reading stats. Users can save favorites to Local Storage and toggle dark mode.",
-  "image":InkVibe,
-  "url": "https://ink-vibe.vercel.app/",
-  "code": "https://github.com/EL-KADI/InkVibe",
-  "tags": [
-    "Next.js",
-    "Tailwind CSS",
-    "Open Library API",
-    "Digital Library"
-  ]
-},
-
-{
-  "title": "DreamGarden",
-  "description": "DreamGarden is an interactive virtual plant garden design platform built with Next.js, Tailwind CSS, Three.js, and React-Beautiful-DnD. It enables users to create personalized garden layouts by selecting and arranging plants through a drag-and-drop interface. The platform offers a responsive interface with design export options as images or PDFs. Users can save designs to Local Storage and toggle dark mode for an immersive experience.",
-  "image":DreamGarden,
-  "url": "https://dream-garden-wheat.vercel.app/",
-  "code": "https://github.com/EL-KADI/Dream-Garden",
-  "tags": [
-    "Next.js",
-    "Tailwind CSS",
-    "Three.js",
-    "React-Beautiful-DnD",
-    "Trefle API",
-    "OpenWeatherMap API",
-    "Plant Design",
-    "Interactive"
-  ]
-},
-
+      title: "AstroVerse",
+      description:
+        "AstroVerse is an interactive space exploration platform built with Next.js, Tailwind CSS, Three.js, and GSAP. It leverages the NASA API to deliver real-time astronomical data, including the Astronomy Picture of the Day (APOD), Mars rover photos, and near-Earth object information. The platform offers a responsive, interface with a 3D planet exploration feature, a kids’ educational section with quizzes, and a space missions showcase. Users can save favorite planets or images and enjoy smooth animations for an immersive experience.",
+      image: AstroVerse,
+      url: "https://astro-verse-mu.vercel.app/",
+      code: "https://github.com/EL-KADI/AstroVerse",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Three.js",
+        "GSAP",
+        "NASA API",
+        "Space Exploration",
+        "Educational",
+      ],
+    },
+    {
+      title: "EraEcho",
+      description:
+        "EraEcho is an interactive platform for exploring historical events, built with Next.js, Tailwind CSS, and Framer Motion. It uses the On This Day API to display events for a specific date or year on a dynamic timeline. The responsive interface offers event filtering, a random event feature, a kids’ section, and the ability to save favorites to Local Storage with smooth animations.",
+      image: EraEcho,
+      url: "https://era-echo.vercel.app/",
+      code: "https://github.com/EL-KADI/EraEcho",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "On This Day API",
+        "Historical Events",
+        "Educational",
+      ],
+    },
+    {
+      title: "InkVibe",
+      description:
+        "InkVibe is a digital library platform built with Next.js, Tailwind CSS, and Swiper.js. It uses the Open Library API to browse and search free books by genre, language, or author. The responsive interface offers a bookshelf, reading lists, a kids’ section with quizzes, and reading stats. Users can save favorites to Local Storage and toggle dark mode.",
+      image: InkVibe,
+      url: "https://ink-vibe.vercel.app/",
+      code: "https://github.com/EL-KADI/InkVibe",
+      tags: ["Next.js", "Tailwind CSS", "Open Library API", "Digital Library"],
+    },
     {
       title: "AuddTune",
       description:
@@ -214,6 +209,24 @@ export default function Projects() {
       url: "https://spark-theta-five.vercel.app/",
       code: "https://github.com/EL-KADI/Spark",
       tags: ["Next.Js", "Tailwind CSS", "NewsAPI", "Real-time Data"],
+    },
+    {
+      title: "DreamGarden",
+      description:
+        "DreamGarden is an interactive virtual plant garden design platform built with Next.js, Tailwind CSS, Three.js, and React-Beautiful-DnD. It enables users to create personalized garden layouts by selecting and arranging plants through a drag-and-drop interface. The platform offers a responsive interface with design export options as images or PDFs. Users can save designs to Local Storage and toggle dark mode for an immersive experience.",
+      image: DreamGarden,
+      url: "https://dream-garden-wheat.vercel.app/",
+      code: "https://github.com/EL-KADI/Dream-Garden",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Three.js",
+        "React-Beautiful-DnD",
+        "Trefle API",
+        "OpenWeatherMap API",
+        "Plant Design",
+        "Interactive",
+      ],
     },
     {
       title: "MovieNest",
@@ -346,12 +359,7 @@ export default function Projects() {
       image: Daniels,
       url: "https://daniels-tau-fawn.vercel.app/",
       code: "https://github.com/EL-KADI/master-tow",
-      tags: [
-        "HTML",
-        "CSS",
-        "Portfolio",
-        "Single-page Application",
-      ],
+      tags: ["HTML", "CSS", "Portfolio", "Single-page Application"],
     },
     {
       title: "DevFolio",
@@ -360,7 +368,7 @@ export default function Projects() {
       image: DevFolio,
       url: "https://devfolio-five-xi.vercel.app/",
       code: "https://github.com/EL-KADI/DevFolio",
-      tags: ["HTML", "CSS","Portfolio", "Blog"],
+      tags: ["HTML", "CSS", "Portfolio", "Blog"],
     },
     {
       title: "Start Framework",
@@ -369,7 +377,7 @@ export default function Projects() {
       image: StartFramework,
       url: "https://el-kadi.github.io/Start-Framework/",
       code: "https://github.com/EL-KADI/Start-Framework",
-      tags: ["React","Portfolio", "Contact Form"],
+      tags: ["React", "Portfolio", "Contact Form"],
     },
     {
       title: "Random Quote Generator",
