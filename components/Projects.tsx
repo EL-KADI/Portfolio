@@ -43,6 +43,7 @@ import DreamGarden from "../Images/DreamGarden.png";
 import InkVibe from "../Images/InkVibe.png";
 import EraEcho from "../Images/EraEcho.png";
 import SoundVoyage from "../Images/SoundVoyage.png";
+import ScentJourney from "../Images/ScentJourney.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -203,18 +204,14 @@ export default function Projects() {
       tags: ["React", "Tailwind CSS", "Audio API", "Music", "Song Recognition"],
     },
     {
-  "title": "SoundVoyage",
-  "description": "SoundVoyage is an interactive platform built with Next.js and Tailwind CSS to explore traditional musical instruments from various cultures. Users can select countries through an interactive map, listen to instrument sounds, read stories, and save their favorites. The responsive interface includes a map, a favorites page, educational content, dark mode, and Framer Motion animations.",
-  "image":SoundVoyage,
-  "url": "https://sound-voyage.vercel.app/",
-  "code": "https://github.com/EL-KADI/SoundVoyage",
-  "tags": [
-    "Next.js",
-    "Tailwind CSS",
-    "Music",
-    "Culture"
-  ]
-},
+      title: "SoundVoyage",
+      description:
+        "SoundVoyage is an interactive platform built with Next.js and Tailwind CSS to explore traditional musical instruments from various cultures. Users can select countries through an interactive map, listen to instrument sounds, read stories, and save their favorites. The responsive interface includes a map, a favorites page, educational content, dark mode, and Framer Motion animations.",
+      image: SoundVoyage,
+      url: "https://sound-voyage.vercel.app/",
+      code: "https://github.com/EL-KADI/SoundVoyage",
+      tags: ["Next.js", "Tailwind CSS", "Music", "Culture"],
+    },
     {
       title: "Spark",
       description:
@@ -225,21 +222,19 @@ export default function Projects() {
       tags: ["Next.Js", "Tailwind CSS", "NewsAPI", "Real-time Data"],
     },
     {
-      title: "DreamGarden",
+      title: "ScentJourney",
       description:
-        "DreamGarden is an interactive virtual plant garden design platform built with Next.js, Tailwind CSS, Three.js, and React-Beautiful-DnD. It enables users to create personalized garden layouts by selecting and arranging plants through a drag-and-drop interface. The platform offers a responsive interface with design export options as images or PDFs. Users can save designs to Local Storage and toggle dark mode for an immersive experience.",
-      image: DreamGarden,
-      url: "https://dream-garden-wheat.vercel.app/",
-      code: "https://github.com/EL-KADI/Dream-Garden",
+        "ScentJourney is an interactive educational platform for exploring traditional perfumes from around the world, built with Next.js, Tailwind CSS, and Framer Motion. It features an interactive map for region selection, detailed perfume cards with cultural stories, and an Unsplash API integration for rich imagery. The responsive interface includes a favorites system with Local Storage persistence, a learning section with cultural articles, and a seamless dark/light mode toggle with smooth transitions.",
+      image: ScentJourney,
+      url: "https://scent-journey-woad.vercel.app/",
+      code: "https://github.com/EL-KADI/ScentJourney",
       tags: [
         "Next.js",
         "Tailwind CSS",
-        "Three.js",
-        "React-Beautiful-DnD",
-        "Trefle API",
-        "OpenWeatherMap API",
-        "Plant Design",
-        "Interactive",
+        "Framer Motion",
+        "Unsplash API",
+        "Interactive Map",
+        "Cultural Education",
       ],
     },
     {
@@ -279,6 +274,24 @@ export default function Projects() {
         "Axios",
         "Ticketmaster API",
         "Event Discovery",
+      ],
+    },
+    {
+      title: "DreamGarden",
+      description:
+        "DreamGarden is an interactive virtual plant garden design platform built with Next.js, Tailwind CSS, Three.js, and React-Beautiful-DnD. It enables users to create personalized garden layouts by selecting and arranging plants through a drag-and-drop interface. The platform offers a responsive interface with design export options as images or PDFs. Users can save designs to Local Storage and toggle dark mode for an immersive experience.",
+      image: DreamGarden,
+      url: "https://dream-garden-wheat.vercel.app/",
+      code: "https://github.com/EL-KADI/Dream-Garden",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Three.js",
+        "React-Beautiful-DnD",
+        "Trefle API",
+        "OpenWeatherMap API",
+        "Plant Design",
+        "Interactive",
       ],
     },
     {
