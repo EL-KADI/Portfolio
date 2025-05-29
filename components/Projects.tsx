@@ -44,6 +44,7 @@ import InkVibe from "../Images/InkVibe.png";
 import EraEcho from "../Images/EraEcho.png";
 import SoundVoyage from "../Images/SoundVoyage.png";
 import ScentJourney from "../Images/ScentJourney.png";
+import LexisLore from "../Images/LexisLore.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -222,19 +223,20 @@ export default function Projects() {
       tags: ["Next.Js", "Tailwind CSS", "NewsAPI", "Real-time Data"],
     },
     {
-      title: "ScentJourney",
+      title: "LexisLore",
       description:
-        "ScentJourney is an interactive educational platform for exploring traditional perfumes from around the world, built with Next.js, Tailwind CSS, and Framer Motion. It features an interactive map for region selection, detailed perfume cards with cultural stories, and an Unsplash API integration for rich imagery. The responsive interface includes a favorites system with Local Storage persistence, a learning section with cultural articles, and a seamless dark/light mode toggle with smooth transitions.",
-      image: ScentJourney,
-      url: "https://scent-journey-woad.vercel.app/",
-      code: "https://github.com/EL-KADI/ScentJourney",
+        "LexisLore is an interactive platform built with Next.js, Tailwind CSS, and Swiper.js to teach rare heritage words from various languages. Users select languages, view words with meanings, stories, and Web Speech API pronunciation, and save favorites. The responsive interface includes a language selector, word card slider, favorites page, along with dark mode and Framer Motion animations.",
+      image: LexisLore,
+      url: "https://lexis-lore.vercel.app/",
+      code: "https://github.com/EL-KADI/LexisLore",
       tags: [
         "Next.js",
         "Tailwind CSS",
-        "Framer Motion",
-        "Unsplash API",
-        "Interactive Map",
-        "Cultural Education",
+        "Swiper.js",
+        "Random Word API",
+        "Web Speech API",
+        "Language",
+        "Education",
       ],
     },
     {
@@ -259,6 +261,22 @@ export default function Projects() {
         "Games",
         "Authentication",
         "User Experience",
+      ],
+    },
+    {
+      title: "ScentJourney",
+      description:
+        "ScentJourney is an interactive educational platform for exploring traditional perfumes from around the world, built with Next.js, Tailwind CSS, and Framer Motion. It features an interactive map for region selection, detailed perfume cards with cultural stories, and an Unsplash API integration for rich imagery. The responsive interface includes a favorites system with Local Storage persistence, a learning section with cultural articles, and a seamless dark/light mode toggle with smooth transitions.",
+      image: ScentJourney,
+      url: "https://scent-journey-woad.vercel.app/",
+      code: "https://github.com/EL-KADI/ScentJourney",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Unsplash API",
+        "Interactive Map",
+        "Cultural Education",
       ],
     },
     {
