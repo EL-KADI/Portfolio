@@ -528,7 +528,7 @@ export default function Projects() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
           >
             {featuredProjects.map((project, index) => (
               <motion.div key={index} variants={item}>
@@ -557,7 +557,7 @@ export default function Projects() {
                     <CardHeader className="pb-2">
                       <CardTitle className="text-xl">{project.title}</CardTitle>
                     </CardHeader>
-                    <CardContent className="flex-grow overflow-y-auto max-h-80">
+                    <CardContent className="flex-grow overflow-y-auto max-h-80 md:max-h-40 lg:max-h-80 xl:max-h-52 2xl:max-h-80">
                       <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                         {project.description}
                       </p>
