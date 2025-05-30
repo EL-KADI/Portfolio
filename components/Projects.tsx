@@ -45,6 +45,7 @@ import EraEcho from "../Images/EraEcho.png";
 import SoundVoyage from "../Images/SoundVoyage.png";
 import ScentJourney from "../Images/ScentJourney.png";
 import LexisLore from "../Images/LexisLore.png";
+import OceanForge from "../Images/OceanForge.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -214,15 +215,6 @@ export default function Projects() {
       tags: ["Next.js", "Tailwind CSS", "Music", "Culture"],
     },
     {
-      title: "Spark",
-      description:
-        "Spark is a news aggregation platform built with Next.Js and Tailwind CSS. It enables users to access real-time news from global and Arabic sources, such as Al Jazeera and BBC Arabic, using the NewsAPI. The platform offers a sleek, user-friendly interface to browse, search, and filter news articles by topics like technology, politics, or sports, with support for Arabic and English content.",
-      image: spark,
-      url: "https://spark-theta-five.vercel.app/",
-      code: "https://github.com/EL-KADI/Spark",
-      tags: ["Next.Js", "Tailwind CSS", "NewsAPI", "Real-time Data"],
-    },
-    {
       title: "LexisLore",
       description:
         "LexisLore is an interactive platform built with Next.js, Tailwind CSS, and Swiper.js to teach rare heritage words from various languages. Users select languages, view words with meanings, stories, and Web Speech API pronunciation, and save favorites. The responsive interface includes a language selector, word card slider, favorites page, along with dark mode and Framer Motion animations.",
@@ -238,6 +230,31 @@ export default function Projects() {
         "Language",
         "Education",
       ],
+    },
+    {
+      title: "OceanForge",
+      description:
+        "This project is a fully interactive wave visualization application with real-time controls and a challenge system. It allows users to design and customize mesmerizing ocean waves with adjustable parameters like speed, height, and frequency. Users can save their designs and choose from various stunning backgrounds. The app features a responsive design with smooth animations and local storage for persistence.",
+      image:OceanForge,
+      url: "https://ocean-forge.vercel.app/",
+      code: "https://github.com/EL-KADI/OceanForge",
+      tags: [
+        "Next.js",
+        "Canvas Animation",
+        "Framer Motion",
+        "Wave Physics",
+        "Local Storage",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      title: "Spark",
+      description:
+        "Spark is a news aggregation platform built with Next.Js and Tailwind CSS. It enables users to access real-time news from global and Arabic sources, such as Al Jazeera and BBC Arabic, using the NewsAPI. The platform offers a sleek, user-friendly interface to browse, search, and filter news articles by topics like technology, politics, or sports, with support for Arabic and English content.",
+      image: spark,
+      url: "https://spark-theta-five.vercel.app/",
+      code: "https://github.com/EL-KADI/Spark",
+      tags: ["Next.Js", "Tailwind CSS", "NewsAPI", "Real-time Data"],
     },
     {
       title: "MovieNest",
