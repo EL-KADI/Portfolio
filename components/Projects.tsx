@@ -46,6 +46,8 @@ import SoundVoyage from "../Images/SoundVoyage.png";
 import ScentJourney from "../Images/ScentJourney.png";
 import LexisLore from "../Images/LexisLore.png";
 import OceanForge from "../Images/OceanForge.png";
+import MassioHealth from "../Images/MassioHealth.png";
+import EasyCode from "../Images/EasyCode.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -88,14 +90,13 @@ export default function Projects() {
       featured: true,
     },
     {
-      title: "Digital Card Creator",
+      title: "FreshCart (E-Commerce App)",
       description:
-        "Digital Card Creator is a flexible platform built with Next.js and Tailwind CSS, allowing users to create custom digital cards such as greeting cards, invitations, and business cards. Users can start designing from scratch, adding text, images, and freely customizing colors and fonts. The platform provides instant preview of the designs and supports downloading the final cards in PNG or PDF format using jsPDF. It leverages Fabric.js for powerful and dynamic graphic editing, ensuring a smooth and flexible design experience suitable for both personal and professional use.",
-      image: DigitalCardCreator,
-      url: "https://digital-card-creator-nine.vercel.app",
-      code: "https://github.com/EL-KADI/Digital-Card-Creator",
-      tags: ["Next.js", "Tailwind CSS", "Fabric.js", "Design Tool", "jsPDF"],
-      featured: true,
+        "This project is a fully integrated e-commerce website with a Login Page and Home Page. It dynamically fetches content from APIs, offering a wide range of products, deals, and discounts. Users can browse items seamlessly, enjoying a clean design and interactive interface.",
+      image: FreshCart,
+      url: "https://fresh-cart-virid-beta.vercel.app/",
+      code: "https://github.com/EL-KADI/FreshCart-E-commerce-App",
+      tags: ["React", "E-commerce", "API Integration", "Authentication"],
     },
     {
       title: "VideoQuest",
@@ -114,30 +115,6 @@ export default function Projects() {
       featured: true,
     },
     {
-      title: "Podcast Finder",
-      description:
-        "Podcast Finder is an interactive front-end application built with Next.js and Tailwind CSS, designed to enable users to easily search and explore a wide variety of podcast information sourced from open platforms. The site features a dedicated section for Featured Podcasts to help users follow the best carefully selected episodes and shows. The application boasts a modern and smooth user interface, ensuring an engaging and seamless experience for users of all levels.",
-      image: PodcastFinder,
-      url: "https://podcast-finder-seven.vercel.app/",
-      code: "https://github.com/EL-KADI/Podcast-Finder",
-      tags: [
-        "Next.js",
-        "Tailwind CSS",
-        "Podcast",
-        "Search",
-        "Featured Content",
-      ],
-    },
-    {
-      title: "FreshCart (E-Commerce App)",
-      description:
-        "This project is a fully integrated e-commerce website with a Login Page and Home Page. It dynamically fetches content from APIs, offering a wide range of products, deals, and discounts. Users can browse items seamlessly, enjoying a clean design and interactive interface.",
-      image: FreshCart,
-      url: "https://fresh-cart-virid-beta.vercel.app/",
-      code: "https://github.com/EL-KADI/FreshCart-E-commerce-App",
-      tags: ["React", "E-commerce", "API Integration", "Authentication"],
-    },
-    {
       title: "BitPulse",
       description:
         "BitPulse is a financial data platform built with Next.js and Tailwind CSS. It provides real-time and historical price data for traditional currencies (e.g., USD/EGP) and cryptocurrencies (e.g., Bitcoin, Ethereum). The platform utilizes ExchangeRate-API for currency exchange rates and CoinGecko API for crypto prices, displayed through interactive Chart.js visualizations. It features a clean, responsive interface with a currency converter and time-range filters for data analysis.",
@@ -154,6 +131,42 @@ export default function Projects() {
       ],
       featured: true,
     },
+    {
+      title: "EasyCode",
+      description:
+        "EasyCode Editor is a web-based HTML & CSS live editor built with React and Tailwind CSS. It enables users to write, edit, and preview HTML/CSS code in real time. The platform includes features like code saving/loading with localStorage, a theme toggle between light and dark modes, and responsive design for mobile and tablets. With a customizable layout that supports split view, editor-only, or preview-only modes, it's ideal for beginners, prototyping, and teaching front-end development. Toast notifications enhance the user experience, and the project is structured using reusable components for maintainability.",
+      image: EasyCode,
+      url: "https://easy-code-smoky.vercel.app/",
+      code: "https://github.com/EL-KADI/EasyCode",
+      tags: ["React", "Tailwind CSS", "Live Editor", "localStorage"],
+    },
+    {
+      title: "Digital Card Creator",
+      description:
+        "Digital Card Creator is a flexible platform built with Next.js and Tailwind CSS, allowing users to create custom digital cards such as greeting cards, invitations, and business cards. Users can start designing from scratch, adding text, images, and freely customizing colors and fonts. The platform provides instant preview of the designs and supports downloading the final cards in PNG or PDF format using jsPDF. It leverages Fabric.js for powerful and dynamic graphic editing, ensuring a smooth and flexible design experience suitable for both personal and professional use.",
+      image: DigitalCardCreator,
+      url: "https://digital-card-creator-nine.vercel.app",
+      code: "https://github.com/EL-KADI/Digital-Card-Creator",
+      tags: ["Next.js", "Tailwind CSS", "Fabric.js", "Design Tool", "jsPDF"],
+      featured: true,
+    },
+
+    {
+      title: "Podcast Finder",
+      description:
+        "Podcast Finder is an interactive front-end application built with Next.js and Tailwind CSS, designed to enable users to easily search and explore a wide variety of podcast information sourced from open platforms. The site features a dedicated section for Featured Podcasts to help users follow the best carefully selected episodes and shows. The application boasts a modern and smooth user interface, ensuring an engaging and seamless experience for users of all levels.",
+      image: PodcastFinder,
+      url: "https://podcast-finder-seven.vercel.app/",
+      code: "https://github.com/EL-KADI/Podcast-Finder",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Podcast",
+        "Search",
+        "Featured Content",
+      ],
+    },
+
     {
       title: "AstroVerse",
       description:
@@ -235,7 +248,7 @@ export default function Projects() {
       title: "OceanForge",
       description:
         "This project is a fully interactive wave visualization application with real-time controls and a challenge system. It allows users to design and customize mesmerizing ocean waves with adjustable parameters like speed, height, and frequency. Users can save their designs and choose from various stunning backgrounds. The app features a responsive design with smooth animations and local storage for persistence.",
-      image:OceanForge,
+      image: OceanForge,
       url: "https://ocean-forge.vercel.app/",
       code: "https://github.com/EL-KADI/OceanForge",
       tags: [
@@ -343,6 +356,16 @@ export default function Projects() {
         "Dashboard",
         "Local Storage",
       ],
+    },
+
+    {
+      title: "MassioHealth",
+      description:
+        "MassioHealth is a Body Mass Index (BMI) calculator designed to help users easily calculate and understand their BMI. Users can input their weight in kilograms and height in meters to instantly calculate their BMI and view the corresponding health category. It supports real-time feedback and offers a clean, responsive interface for an optimal user experience across all devices. The application is built using the Next.js framework.",
+      image: MassioHealth,
+      url: "https://massio-health.vercel.app/",
+      code: "https://github.com/EL-KADI/MassioHealth",
+      tags: ["Next.js", "BMI Calculator", "Responsive Design"],
     },
 
     {
