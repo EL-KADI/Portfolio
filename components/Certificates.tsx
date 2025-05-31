@@ -74,7 +74,6 @@ export default function Certificates() {
             <motion.div
               whileHover={{
                 scale: 1.05,
-                rotateY: 10,
                 boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
               }}
               className="h-full"
