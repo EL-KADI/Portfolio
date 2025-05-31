@@ -666,7 +666,6 @@ export default function Projects() {
                   <motion.div
                     whileHover={{
                       scale: 1.03,
-                      rotateY: 5,
                       boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
                     }}
                     className="h-full"
