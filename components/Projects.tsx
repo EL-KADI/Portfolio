@@ -48,6 +48,8 @@ import LexisLore from "../Images/LexisLore.png";
 import OceanForge from "../Images/OceanForge.png";
 import MassioHealth from "../Images/MassioHealth.png";
 import EasyCode from "../Images/EasyCode.png";
+import SiteScan from "../Images/SiteScan.png";
+import SlimCode from "../Images/SlimCode.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -210,6 +212,38 @@ export default function Projects() {
       tags: ["Next.js", "Tailwind CSS", "Open Library API", "Digital Library"],
     },
     {
+      title: "SiteScan",
+      description:
+        "SiteScan is a website analysis tool built with Next.js and Tailwind CSS. It uses Google PageSpeed Insights to assess Performance, SEO, Accessibility, and Best Practices. Features include a modern responsive design, interactive progress indicators, expandable analysis cards, and actionable tips. Results can be exported as JSON or copied, with toast notifications for better UX. Includes About, Contact, and Privacy Policy pages.",
+      image: SiteScan,
+      url: "https://site-scan.vercel.app/",
+      code: "https://github.com/EL-KADI/SiteScan",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Google PageSpeed API",
+        "Website Analysis",
+        "Performance Testing",
+        "SEO Analysis",
+        "Accessibility Testing",
+      ],
+    },
+    {
+      title: "SlimCode",
+      description:
+        "SlimCode is a front-end code minification tool built with Next.js and Tailwind CSS. It enables users to minify HTML, CSS, JSON, JavaScript, and JSX files instantly through file upload or manual code input. The platform features real-time validation, file type detection, size statistics, and client-side processing for security. Users can copy minified code to clipboard or download optimized files with proper naming conventions, all without server uploads.",
+      image: SlimCode,
+      url: "https://slim-code.vercel.app/",
+      code: "https://github.com/EL-KADI/SlimCode",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Code Minification",
+        "File Processing",
+        "shadcn/ui",
+      ],
+    },
+    {
       title: "AuddTune",
       description:
         "AuddTune is a song recognition platform built with React and Tailwind CSS. It allows users to identify songs by recording audio or uploading an audio file. The platform utilizes the audd.io API for accurate song analysis. It provides an easy-to-use interface to display song information such as the artist's name, song title, and album.",
@@ -357,17 +391,6 @@ export default function Projects() {
         "Local Storage",
       ],
     },
-
-    {
-      title: "MassioHealth",
-      description:
-        "MassioHealth is a Body Mass Index (BMI) calculator designed to help users easily calculate and understand their BMI. Users can input their weight in kilograms and height in meters to instantly calculate their BMI and view the corresponding health category. It supports real-time feedback and offers a clean, responsive interface for an optimal user experience across all devices. The application is built using the Next.js framework.",
-      image: MassioHealth,
-      url: "https://massio-health.vercel.app/",
-      code: "https://github.com/EL-KADI/MassioHealth",
-      tags: ["Next.js", "BMI Calculator", "Responsive Design"],
-    },
-
     {
       title: "NoteApp",
       description:
@@ -382,6 +405,15 @@ export default function Projects() {
         "API Integration",
         "Task Management",
       ],
+    },
+    {
+      title: "MassioHealth",
+      description:
+        "MassioHealth is a Body Mass Index (BMI) calculator designed to help users easily calculate and understand their BMI. Users can input their weight in kilograms and height in meters to instantly calculate their BMI and view the corresponding health category. It supports real-time feedback and offers a clean, responsive interface for an optimal user experience across all devices. The application is built using the Next.js framework.",
+      image: MassioHealth,
+      url: "https://massio-health.vercel.app/",
+      code: "https://github.com/EL-KADI/MassioHealth",
+      tags: ["Next.js", "BMI Calculator", "Responsive Design"],
     },
     {
       title: "FoodDex",
