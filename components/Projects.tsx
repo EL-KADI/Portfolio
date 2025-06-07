@@ -50,6 +50,10 @@ import MassioHealth from "../Images/MassioHealth.png";
 import EasyCode from "../Images/EasyCode.png";
 import SiteScan from "../Images/SiteScan.png";
 import SlimCode from "../Images/SlimCode.png";
+import FlightTrace from "../Images/FlightTrace.png";
+import SkyTracker from "../Images/SkyTracker.png";
+import CVForge from "../Images/CVForge.png";
+import PlayStats from "../Images/PlayStats.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -132,6 +136,22 @@ export default function Projects() {
         "Currency Exchange",
       ],
       featured: true,
+    },
+    {
+      title: "SkyTracker",
+      description:
+        "SkyTracker is a dynamic flight tracking platform built with React, designed to deliver an engaging and interactive user experience. Powered by a flight data API, it allows users to search for flights by city, flight number, or airline, presenting detailed information such as flight status, departure/arrival times, and aircraft details. The app features a card-based interface for flight results, an interactive Mapbox map to track flight paths in real-time, and a favorites section stored in LocalStorage. With reusable React components, dynamic filtering, and a responsive design optimized for all devices, SkyTracker showcases modern front-end development with a focus on interactivity and smooth navigation.",
+      image: SkyTracker,
+      url: "https://sky-tracker-snowy.vercel.app/",
+      code: "https://github.com/EL-KADI/SkyTracker",
+      tags: [
+        "React",
+        "aviationstack API",
+        "Mapbox",
+        "LocalStorage",
+        "Flight Tracker",
+        "Interactive UI",
+      ],
     },
     {
       title: "EasyCode",
@@ -229,6 +249,31 @@ export default function Projects() {
       ],
     },
     {
+      title: "CVForge",
+      description:
+        "CVForge is a Next.js web app that makes creating professional resumes easy. It features a dynamic form to enter personal info, education, work experience, and skills, with live previews of multiple customizable templates. Users can optionally upload a profile picture with a placeholder image. Resumes can be exported as PDFs using jsPDF. Data is saved locally via LocalStorage.",
+      image: CVForge,
+      url: "https://cv-forge-nine.vercel.app/",
+      code: "https://github.com/EL-KADI/CVForge",
+      tags: ["Next.js", "jsPDF", "LocalStorage", "Resume Builder"],
+    },
+    {
+      title: "FlightTrace",
+      description:
+        "FlightTrace is a Next.js flight tracking app that lets users monitor flights in real-time. It supports searching by flight number, destination, or airline, showing departure/arrival times, status, and gate info. It features a responsive dashboard with filters, a Mapbox flight path map, and a favorites system using LocalStorage. The app offers fast loading with smooth animations for a better user experience.",
+      image: FlightTrace,
+      url: "https://flight-trace.vercel.app/",
+      code: "https://github.com/EL-KADI/FlightTrace",
+      tags: [
+        "Next.js",
+        "aviationstack API",
+        "Mapbox",
+        "LocalStorage",
+        "Flight Tracking",
+        "Real-Time Data",
+      ],
+    },
+    {
       title: "SlimCode",
       description:
         "SlimCode is a front-end code minification tool built with Next.js and Tailwind CSS. It enables users to minify HTML, CSS, JSON, JavaScript, and JSX files instantly through file upload or manual code input. The platform features real-time validation, file type detection, size statistics, and client-side processing for security. Users can copy minified code to clipboard or download optimized files with proper naming conventions, all without server uploads.",
@@ -241,6 +286,22 @@ export default function Projects() {
         "Code Minification",
         "File Processing",
         "shadcn/ui",
+      ],
+    },
+    {
+      title: "PlayStats",
+      description:
+        "PlayStats is a Next.js sports simulation platform offering live scores, stats, and standings with real-time updates. It features team profiles, player stats, and match histories, plus charts and tables for clear data display. Built with server-side rendering and reusable components, it delivers a fast, scalable, and responsive experience on any device.",
+      image: PlayStats,
+      url: "https://play-stats-orcin.vercel.app/",
+      code: "https://github.com/EL-KADI/PlayStats",
+      tags: [
+        "Next.js",
+        "Sports Simulation",
+        "TheSportsDB API",
+        "Interactive UI",
+        "Responsive Design",
+        "Data Visualization",
       ],
     },
     {
