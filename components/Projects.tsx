@@ -54,6 +54,8 @@ import FlightTrace from "../Images/FlightTrace.png";
 import SkyTracker from "../Images/SkyTracker.png";
 import CVForge from "../Images/CVForge.png";
 import PlayStats from "../Images/PlayStats.png";
+import SkyLens from "../Images/SkyLens.png";
+import QuizBit from "../Images/QuizBit.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -154,6 +156,23 @@ export default function Projects() {
       ],
     },
     {
+      title: "QuizBit",
+      description:
+        "QuizBit is an interactive coding quiz platform built with Next.js 15, designed to help developers master programming skills through engaging practice sessions. Featuring real-time code evaluation, syntax-highlighted editors, and instant feedback, it supports JavaScript, Python, Node.js, SQL and CSS challenges across multiple difficulty levels. The platform includes a comprehensive quiz selection interface with filtering capabilities, progress tracking with detailed analytics, favorites management, and responsive design optimized for all devices.",
+      image: QuizBit,
+      url: "https://quiz-bit-zeta.vercel.app/",
+      code: "https://github.com/EL-KADI/QuizBit",
+      tags: [
+        "Next.js",
+        "shadcn/ui",
+        "Interactive Learning",
+        "Code Editor",
+        "Real-time Evaluation",
+        "Responsive Design",
+        "Educational Platform",
+      ],
+    },
+    {
       title: "EasyCode",
       description:
         "EasyCode Editor is a web-based HTML & CSS live editor built with React and Tailwind CSS. It enables users to write, edit, and preview HTML/CSS code in real time. The platform includes features like code saving/loading with localStorage, a theme toggle between light and dark modes, and responsive design for mobile and tablets. With a customizable layout that supports split view, editor-only, or preview-only modes, it's ideal for beginners, prototyping, and teaching front-end development. Toast notifications enhance the user experience, and the project is structured using reusable components for maintainability.",
@@ -161,6 +180,21 @@ export default function Projects() {
       url: "https://easy-code-smoky.vercel.app/",
       code: "https://github.com/EL-KADI/EasyCode",
       tags: ["React", "Tailwind CSS", "Live Editor", "localStorage"],
+    },
+    {
+      title: "SkyLens",
+      description:
+        "SkyLens is an interactive weather forecast platform built with Next.js, designed to deliver real-time weather data with stunning visual experiences. Powered by the OpenWeatherMap API, it allows users to search for cities worldwide with autocomplete suggestions, presenting comprehensive weather information including current conditions, 5-day forecasts, and hourly predictions. The app features dynamic weather backgrounds that adapt to current conditions, a responsive card-based interface, detailed weather analytics with interactive charts using Recharts, and popular cities showcase for quick access.",
+      image: SkyLens,
+      url: "https://sky-lens-six.vercel.app/",
+      code: "https://github.com/EL-KADI/SkyLens",
+      tags: [
+        "Next.js",
+        "OpenWeatherMap API",
+        "Tailwind CSS",
+        "Recharts",
+        "Weather Forecast",
+      ],
     },
     {
       title: "Digital Card Creator",
