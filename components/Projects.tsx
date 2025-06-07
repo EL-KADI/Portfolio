@@ -140,7 +140,7 @@ export default function Projects() {
     {
       title: "SkyTracker",
       description:
-        "SkyTracker is a dynamic flight tracking platform built with React, designed to deliver an engaging and interactive user experience. Powered by a flight data API, it allows users to search for flights by city, flight number, or airline, presenting detailed information such as flight status, departure/arrival times, and aircraft details. The app features a card-based interface for flight results, an interactive Mapbox map to track flight paths in real-time, and a favorites section stored in LocalStorage. With reusable React components, dynamic filtering, and a responsive design optimized for all devices, SkyTracker showcases modern front-end development with a focus on interactivity and smooth navigation.",
+        "SkyTracker is a dynamic flight tracking platform built with React, designed to deliver an engaging and interactive user experience. Powered by a flight data API, it allows users to search for flights by city, flight number, or airline, presenting detailed information such as flight status, departure/arrival times, and aircraft details. The app features a card-based interface for flight results, an interactive Mapbox map to track flight paths in real-time, and a favorites section stored in LocalStorage. With reusable React components, dynamic filtering, and a responsive design optimized for all devices.",
       image: SkyTracker,
       url: "https://sky-tracker-snowy.vercel.app/",
       code: "https://github.com/EL-KADI/SkyTracker",
