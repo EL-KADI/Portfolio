@@ -56,6 +56,8 @@ import CVForge from "../Images/CVForge.png";
 import PlayStats from "../Images/PlayStats.png";
 import SkyLens from "../Images/SkyLens.png";
 import QuizBit from "../Images/QuizBit.png";
+import Wander from "../Images/Wander.png";
+import Volcano from "../Images/Volcano.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -454,6 +456,22 @@ export default function Projects() {
       ],
     },
     {
+      title: "Wander",
+      description:
+        "Wander is a virtual forest exploration app built with Next.js. It offers an interactive Mapbox forest map with regions like Misty Lake and Ancient Grove. Each area shows detailed species information with high-quality images, scientific data, and conservation status using a mock iNaturalist API. Users can explore diverse plants and animals through interactive carousels and save their favorite species and regions locally for easy access.",
+      image: Wander,
+      url: "https://wander-smoky.vercel.app/",
+      code: "https://github.com/EL-KADI/Wander",
+      tags: [
+        "Next.js",
+        "Mapbox Integration",
+        "iNaturalist API",
+        "Framer Motion",
+        "Educational Platform",
+        "Nature Discovery",
+      ],
+    },
+    {
       title: "DreamGarden",
       description:
         "DreamGarden is an interactive virtual plant garden design platform built with Next.js, Tailwind CSS, Three.js, and React-Beautiful-DnD. It enables users to create personalized garden layouts by selecting and arranging plants through a drag-and-drop interface. The platform offers a responsive interface with design export options as images or PDFs. Users can save designs to Local Storage and toggle dark mode for an immersive experience.",
@@ -471,6 +489,23 @@ export default function Projects() {
         "Interactive",
       ],
     },
+    {
+      title: "Volcano",
+      description:
+        "Volcano is an interactive volcano exploration platform built with Next.js. It lets users explore a dynamic world map with real-time geological data, view detailed volcano profiles with eruption history and geological features, and enjoy rich animations like smoke and lava effects. Users can also save favorite volcanoes using persistent localStorage for a personalized experience and access detailed scientific insights.",
+      image: Volcano,
+      url: "https://volcano-delta.vercel.app/",
+      code: "https://github.com/EL-KADI/Volcano",
+      tags: [
+        "Next.js",
+        "USGS Volcano API",
+        "Geological Data",
+        "Educational Platform",
+        "CSS Animations",
+        "LocalStorage",
+      ],
+    },
+
     {
       title: "DR. Abdullah Clinic System",
       description:
