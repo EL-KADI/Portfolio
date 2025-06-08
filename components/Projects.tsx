@@ -58,6 +58,11 @@ import SkyLens from "../Images/SkyLens.png";
 import QuizBit from "../Images/QuizBit.png";
 import Wander from "../Images/Wander.png";
 import Volcano from "../Images/Volcano.png";
+import MedicalPoint from "../Images/MedicalPoint.png";
+import ClinicHub from "../Images/ClinicHub.png";
+import MedCarePro from "../Images/MedCarePro.png";
+import CrossCraft from "../Images/CrossCraft.png";
+import Chartify from "../Images/Chartify.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -325,6 +330,37 @@ export default function Projects() {
       ],
     },
     {
+      title: "Chartify",
+      description:
+        "Chartify is a web app built with Next.js for creating interactive bar, line, and pie charts. It features a simple interface, smooth Chart.js animations, and options to export charts as PNG or JSON. The app includes local storage, server-side rendering, and ARIA labels for accessibility. Optimized for all devices, Chartify offers an engaging visualization experience.",
+      image: Chartify,
+      url: "https://chartify-rouge.vercel.app/",
+      code: "https://github.com/EL-KADI/Chartify",
+      tags: [
+        "Next.js",
+        "Chart.js",
+        "Data Visualization",
+        "Animations",
+        "Accessibility",
+      ],
+    },
+    {
+      title: "CrossCraft",
+      description:
+        "CrossCraft is an interactive Next.js web app for creating and solving custom crossword puzzles. It features an easy clue input, responsive grid generation, fun animations, and supports saving puzzles as PNG or JSON. With secure local storage, server-side rendering for speed, and ARIA support for accessibility, it works smoothly across all devices.",
+      image: CrossCraft,
+      url: "https://cross-craft.vercel.app/",
+      code: "https://github.com/EL-KADI/CrossCraft",
+      tags: [
+        "Next.js",
+        "Chart.js",
+        "Canvas API",
+        "Crossword Puzzle",
+        "Animations",
+        "Accessibility",
+      ],
+    },
+    {
       title: "PlayStats",
       description:
         "PlayStats is a Next.js sports simulation platform offering live scores, stats, and standings with real-time updates. It features team profiles, player stats, and match histories, plus charts and tables for clear data display. Built with server-side rendering and reusable components, it delivers a fast, scalable, and responsive experience on any device.",
@@ -441,6 +477,21 @@ export default function Projects() {
       ],
     },
     {
+      title: "Medical Point",
+      description:
+        "Medical Point is a bilingual medical data management platform built with Next.js. It streamlines patient and medication tracking using barcode technology across hospital, pharmacy, and attendance modules. Features include real-time inventory updates, bilingual support (English/Arabic) with RTL layout, advanced search, professional printing, and instant notifications.",
+      image: MedicalPoint,
+      url: "https://medical-point-weld.vercel.app/",
+      code: "https://github.com/EL-KADI/Medical-Point",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Medical Management",
+        "Barcode",
+        "Bilingual Support",
+      ],
+    },
+    {
       title: "GoVents",
       description:
         "GoVents is an event discovery platform built with React, Tailwind CSS, and Axios. It allows users to explore local events like concerts, exhibitions, and festivals using the Ticketmaster Discovery API. The platform provides a responsive, English-only interface to browse all available events by default, search by city or event type (e.g., Music, Sports), and filter by date or cost. Users can save favorites, ensuring a seamless experience.",
@@ -505,7 +556,21 @@ export default function Projects() {
         "LocalStorage",
       ],
     },
-
+    {
+      title: "ClinicHub",
+      description:
+        "ClinicHub is a bilingual medical system built with React to help healthcare facilities manage patients, medications, appointments, and staff. It uses barcode technology for accurate tracking and offers real-time inventory updates. The system supports English and Arabic with RTL layout, provides advanced search, secure local storage, printing, and notifications to improve workflow and ensure quality care.",
+      image: ClinicHub,
+      url: "https://clinic-hub-henna.vercel.app/",
+      code: "https://github.com/EL-KADI/ClinicHub",
+      tags: [
+        "React",
+        "Tailwind CSS",
+        "Medical Management",
+        "Barcode",
+        "Healthcare System",
+      ],
+    },
     {
       title: "DR. Abdullah Clinic System",
       description:
@@ -519,6 +584,21 @@ export default function Projects() {
         "Healthcare",
         "Dashboard",
         "Local Storage",
+      ],
+    },
+    {
+      title: "MedCare Pro",
+      description:
+        "MedCare Pro is a bilingual medical management platform built with React. It tracks patients and medications using barcode technology, offers real-time inventory updates, appointment scheduling, and staff management. The system includes advanced reports with interactive charts, bilingual support (English/Arabic) with RTL layout, and features like secure local storage and professional printing.",
+      image: MedCarePro,
+      url: "https://med-care-pro.vercel.app/",
+      code: "https://github.com/EL-KADI/MedCarePro",
+      tags: [
+        "React",
+        "Tailwind CSS",
+        "Medical Management",
+        "Reports",
+        "Charts",
       ],
     },
     {
