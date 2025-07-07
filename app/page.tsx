@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { MoonIcon, SunIcon, ChevronUpIcon } from "lucide-react";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -13,9 +13,11 @@ import { Toaster } from "@/components/ui/toaster";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import { motion, useScroll, useSpring } from "framer-motion";
 import "@/styles/globals.css";
+
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [mounted, setMounted] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const { toast } = useToast();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -40,6 +42,19 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 15) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
@@ -57,10 +72,33 @@ export default function Home() {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   if (!mounted) return null;
 
   return (
     <ThemeProvider attribute="class" defaultTheme={theme} enableSystem={false}>
+      <motion.button
+        onClick={scrollToTop}
+        className={`fixed bottom-4 right-4 z-50 p-2 rounded-full bg-gray-600 dark:bg-slate-700 text-white dark:text-gray-200 hover:bg-gray-500 dark:hover:bg-slate-600 duration-200 transition-colors transform hover:scale-110 ${
+          !isVisible ? "cursor-default" : "cursor-pointer"
+        }`}
+        aria-label="Scroll to top"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{
+          y: isVisible ? 0 : 20,
+          opacity: isVisible ? 1 : 0,
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <ChevronUpIcon className="h-5 w-5" />
+      </motion.button>
+
       <main className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 perspective-1000">
         <ParticlesBackground />
 
@@ -139,7 +177,6 @@ export default function Home() {
             </p>
           </div>
         </footer>
-
         <Toaster />
       </main>
     </ThemeProvider>

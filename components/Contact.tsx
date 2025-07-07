@@ -2,6 +2,12 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+
+declare global {
+  interface Window {
+    emailjs?: any
+  }
+}
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -15,9 +21,10 @@ export default function Contact() {
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [toasts, setToasts] = useState([])
+  type Toast = { id: number; message: string; type: string; visible: boolean }
+  const [toasts, setToasts] = useState<Toast[]>([])
 
-  const addToast = (message, type) => {
+  const addToast = (message: string, type: string) => {
     const newToast = { id: Date.now(), message, type, visible: true }
     setToasts((prevToasts) => [newToast, ...prevToasts])
 
@@ -26,7 +33,7 @@ export default function Contact() {
     }, 4000)
   }
 
-  const removeToast = (id) => {
+  const removeToast = (id: number) => {
     setToasts((prevToasts) => prevToasts.map((toast) => (toast.id === id ? { ...toast, visible: false } : toast)))
 
     setTimeout(() => {
@@ -34,12 +41,12 @@ export default function Contact() {
     }, 500)
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 

@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { useScroll } from "@react-three/drei"
+import { motion, useScroll } from "framer-motion"
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa"
 import { HiOutlineDownload } from "react-icons/hi"
 

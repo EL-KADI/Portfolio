@@ -63,6 +63,16 @@ import ClinicHub from "../Images/ClinicHub.png";
 import MedCarePro from "../Images/MedCarePro.png";
 import CrossCraft from "../Images/CrossCraft.png";
 import Chartify from "../Images/Chartify.png";
+import Transola from "../Images/Transola.png";
+import BalanceBeam from "../Images/BalanceBeam.png";
+import Moodora from "../Images/Moodora.png";
+import JobTrail from "../Images/JobTrail.png";
+import Typix from "../Images/Typix.png";
+import Shelfy from "../Images/Shelfy.png";
+import Dozyly from "../Images/Dozyly.png";
+import Utilix from "../Images/Utilix.png";
+import Sweatly from "../Images/Sweatly.png";
+import Reactly from "../Images/Reactly.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -248,6 +258,22 @@ export default function Projects() {
       ],
     },
     {
+      title: "Transola",
+      description:
+        "Transola is a real-time translation platform built with Next.js and powered by the MyMemory API. It supports over 200 languages with a smooth, responsive interface. Users get instant translation while typing, easy language switching, and organized dropdowns. Key features include translation history, favorites saved in LocalStorage, one-click copy, and export as JSON or TXT. The platform is mobile-friendly, accessible, and designed with a modern, professional look with fast performance, clear UX, and scalable architecture.",
+      image: Transola,
+      url: "https://transola.vercel.app/",
+      code: "https://github.com/EL-KADI/Transola",
+      tags: [
+        "Next.js",
+        "Translation API",
+        "MyMemory API",
+        "Real-time Translation",
+        "Tailwind CSS",
+        "Data Export",
+      ],
+    },
+    {
       title: "EraEcho",
       description:
         "EraEcho is an interactive platform for exploring historical events, built with Next.js, Tailwind CSS, and Framer Motion. It uses the On This Day API to display events for a specific date or year on a dynamic timeline. The responsive interface offers event filtering, a random event feature, a kids’ section, and the ability to save favorites to Local Storage with smooth animations.",
@@ -345,6 +371,57 @@ export default function Projects() {
       ],
     },
     {
+      title: "BalanceBeam",
+      description:
+        "BalanceBeam is a financial planning app built with Next.js that helps users manage budgets and analyze finances. It features real-time validation, animated Chart.js visuals, theme customization, and CSV import/export. Includes LocalStorage for favorites, responsive sidebar, ARIA support, and toast error handling—optimized for all devices with modern React and SSR.",
+      image: BalanceBeam,
+      url: "https://balance-beam.vercel.app/",
+      code: "https://github.com/EL-KADI/BalanceBeam",
+      tags: [
+        "Next.js",
+        "Chart.js",
+        "Financial Planning",
+        "Budget Tracker",
+        "PDF Export",
+        "CSV Import",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      title: "Sweatly",
+      description:
+        "Sweatly is a modern fitness web app built with Next.js, offering personalized workout plans, real-time guidance, calorie tracking, detailed progress charts, and motivational features. It supports dark/light mode, music, notifications, and offline use. Built with Zustand and Framer Motion, it’s fast, responsive, accessible, and mobile-friendly.",
+      image: Sweatly,
+      url: "https://sweatly.vercel.app/",
+      code: "https://github.com/EL-KADI/Sweatly",
+      tags: [
+        "Next.js",
+        "Workout Planner",
+        "Framer Motion",
+        "Recharts",
+        "Zustand",
+        "Tailwind CSS",
+        "Calorie Tracking",
+      ],
+    },
+    {
+      title: "Typix",
+      description:
+        "Typix is a typing test app built with Next.js to improve speed and accuracy. It offers timed tests, WPM tracking, and themes like quotes and code. Supports multiple languages. Users can view progress with charts, store data locally, and enjoy responsive, accessible design. Built with TypeScript, Tailwind CSS, and dark mode.",
+      image: Typix,
+      url: "https://typix-seven.vercel.app/",
+      code: "https://github.com/EL-KADI/Typix",
+      tags: [
+        "Next.js",
+        "Typing Test",
+        "WPM Calculator",
+        "Chart.js",
+        "Progress Tracking",
+        "Multilingual",
+        "Tailwind CSS",
+      ],
+    },
+    {
       title: "CrossCraft",
       description:
         "CrossCraft is an interactive Next.js web app for creating and solving custom crossword puzzles. It features an easy clue input, responsive grid generation, fun animations, and supports saving puzzles as PNG or JSON. With secure local storage, server-side rendering for speed, and ARIA support for accessibility, it works smoothly across all devices.",
@@ -358,6 +435,41 @@ export default function Projects() {
         "Crossword Puzzle",
         "Animations",
         "Accessibility",
+      ],
+    },
+    {
+      title: "Utilix",
+      description:
+        "Utilix is a productivity suite built with Next.js, offering five tools: QR Generator, Password Generator, Base64 Encoder/Decoder, Text Diff Tool, and Word Counter. It supports Arabic, English, theme switching, and saves data locally. With smooth animations and client-side performance, Utilix works offline and provides a fast experience.",
+      image: Utilix,
+      url: "https://utilix-eight.vercel.app/",
+      code: "https://github.com/EL-KADI/Utilix",
+      tags: [
+        "Next.js",
+        "Productivity Tools",
+        "QR Generator",
+        "Password Generator",
+        "Base64 Encoder",
+        "Text Diff",
+        "Word Counter",
+        "Framer Motion",
+        "Tailwind CSS",
+        "RTL Support",
+      ],
+    },
+    {
+      title: "Reactly",
+      description:
+        "Reactly is an EQ training platform built with Next.js that helps users improve emotional and social skills through story-based scenarios. It features 30 real-life situations, instant feedback, EQ scoring, and progress tracking via LocalStorage. With smooth animations, accessibility, and responsive design, Reactly offers an engaging, practical learning experience.",
+      image: Reactly,
+      url: "https://reactly-zeta.vercel.app/",
+      code: "https://github.com/EL-KADI/Reactly",
+      tags: [
+        "Next.js",
+        "Emotional Intelligence",
+        "EQ Training",
+        "Social Skills",
+        "Tailwind CSS",
       ],
     },
     {
@@ -424,6 +536,23 @@ export default function Projects() {
         "Framer Motion",
         "Wave Physics",
         "Local Storage",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      title: "Moodora",
+      description:
+        "Moodora is a sleek productivity and well-being app built with Next.js. It streamlines routines with an elegant interface, daily quotes (ZenQuotes API), real-time weather (OpenWeatherMap), and a task manager with priorities. Includes a mood tracker using HTML5 Canvas, CSS Grid calendar, smooth animations, offline support via LocalStorage, and ARIA accessibility. Built with modern React, SSR, and responsive design.",
+      image: Moodora,
+      url: "https://moodora-pied.vercel.app/",
+      code: "https://github.com/EL-KADI/Moodora",
+      tags: [
+        "Next.js",
+        "ZenQuotes API",
+        "OpenWeatherMap API",
+        "Mood Tracker",
+        "Task Management",
+        "Calendar",
         "Tailwind CSS",
       ],
     },
@@ -572,6 +701,37 @@ export default function Projects() {
       ],
     },
     {
+      title: "Dozyly",
+      description:
+        "Dozyly is a smart, responsive sleep tracking platform built with Next.js. It helps users log sleep times, rate quality, and view trends through interactive charts. The app offers personalized wellness tips based on sleep patterns, supports offline use with LocalStorage, and includes smooth animations, helpful toast notifications, full accessibility, and modern design optimized for all devices.",
+      image: Dozyly,
+      url: "https://dozyly.vercel.app/",
+      code: "https://github.com/EL-KADI/Dozyly",
+      tags: [
+        "Next.js",
+        "Chart.js",
+        "Sleep Tracking",
+        "Health Analytics",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      title: "Shelfy",
+      description:
+        "Shelfy is a book tracking app built with Next.js. It helps users manage their reading with a Goodreads-style interface. Users can track books in categories (Read, Reading, To-Read), rate them, and monitor progress. Features include reviews, filtering, LocalStorage sync, responsive design, and accessibility support. Built with React, TypeScript, and Radix UI, it offers a mobile-friendly experience with offline support.",
+      image: Shelfy,
+      url: "https://shelfy-seven.vercel.app",
+      code: "https://github.com/EL-KADI/Shelfy",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Radix UI",
+        "Tailwind CSS",
+        "Personal Library",
+      ],
+    },
+    {
       title: "DR. Abdullah Clinic System",
       description:
         "Dr. Abdullah's Clinic is a patient management dashboard built with React and Tailwind CSS. It offers secure local storage-based authentication without APIs, providing login, registration, and patient management. Users can add treatment plans, appointments, and surgical cases. The dashboard displays patient details, medical history, and upcoming appointments, ensuring efficient clinic management.",
@@ -584,6 +744,24 @@ export default function Projects() {
         "Healthcare",
         "Dashboard",
         "Local Storage",
+      ],
+    },
+    {
+      title: "JobTrail",
+      description:
+        "JobTrail is a job tracking platform built with Next.js to help users manage their job search. It includes a tracker with validation, sortable tables, and status management. Users can view trends with Chart.js. The app integrates Adzuna API for job listings with filters. Features include CSV export, LocalStorage, mobile navigation, and ARIA accessibility. Built with React, TypeScript, and Tailwind CSS.",
+      image: JobTrail,
+      url: "https://job-trail-iota.vercel.app/",
+      code: "https://github.com/EL-KADI/JobTrail",
+      tags: [
+        "Next.js",
+        "Chart.js",
+        "Adzuna API",
+        "CSV Export",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Job Search",
+        "Real-time API",
       ],
     },
     {
@@ -632,7 +810,7 @@ export default function Projects() {
       image: FoodDex,
       url: "https://fooddex.vercel.app/",
       code: "https://github.com/EL-KADI/FoodDex",
-      tags: ["HTML", "SASS", "Food", "Recipes", "Nutrition"],
+      tags: ["React", "SASS", "Food", "Recipes", "Nutrition"],
     },
     {
       title: "Material Kit 2",
