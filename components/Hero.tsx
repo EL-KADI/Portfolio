@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import SayedRagheb from "../Images/Sayed Ragheb.png"
+import "../styles/globals.css";
+import SayedRagheb from "../Images/Sayed Ragheb.png";
 import {
   GithubIcon,
   LinkedinIcon,
@@ -24,9 +25,14 @@ export default function Hero() {
         <h2 className="text-lg text-gray-600 dark:text-gray-400 mb-2">
           Hello, I am
         </h2>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
-          Sayed Ragheb
-        </h1>
+        <div className="relative mb-[70px]">
+          <h1 className="text-4xl absolute md:text-5xl animation-f-h1 font-bold mb-3 text-stroke">
+            Sayed Ragheb
+          </h1>
+          <h1 className="text-4xl absolute md:text-5xl animation-s-h1 font-bold mb-3 wave">
+            Sayed Ragheb
+          </h1>
+        </div>
         <div className="text-2xl md:text-3xl font-semibold text-primary-600 dark:text-primary-400 mb-4 h-10">
           <TypeAnimation
             sequence={[
