@@ -30,7 +30,6 @@ import NoteApp from "../Images/NoteApp.png";
 import Yonna from "../Images/Yonna.png";
 import nasaehgedety from "../Images/nasaehgedety.png";
 import abdullahclinicsystem from "../Images/Abdullah Clinic System.png";
-import auddtuneimage from "../Images/auddtuneimage.png";
 import DigitalCardCreator from "../Images/Digital Card Creator.png";
 import VideoQuest from "../Images/VideoQuest.png";
 import PodcastFinder from "../Images/Podcast Finder.png";
@@ -73,15 +72,32 @@ import Dozyly from "../Images/Dozyly.png";
 import Utilix from "../Images/Utilix.png";
 import Sweatly from "../Images/Sweatly.png";
 import Reactly from "../Images/Reactly.png";
+import Sakeena from "../Images/Sakeena.png";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
   const projects = [
+      {
+      title: "Sakeena",
+      description:
+        "Sakeena is a modern bilingual (English/Arabic) web application for displaying Islamic prayer times, developed using Next.js and Tailwind CSS. It provides real-time prayer timings, a 30-day prayer schedule, and displays both Hijri and Gregorian dates. Using the Aladhan API, the app automatically detects the user's location to ensure highly accurate and reliable prayer time information. With a clean, intuitive, and fully responsive design, Sakeena makes it easy to stay connected to your daily prayers—anytime, anywhere, on any device.",
+      image: Sakeena,
+      url: "https://sakeena-five.vercel.app/",
+      code: "https://github.com/EL-KADI/Sakeena",
+      tags: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Prayer Times",
+        "Aladhan API",
+        "Localization",
+      ],
+    },
     {
       title: "Yonna (Social App)",
       description:
-        "This project is a fully responsive social media platform built with Next.js and MUI. It features user authentication, a dynamic Home Feed, and interactive user profiles. Content is fetched in real-time from APIs, allowing users to post updates, like, and comment. The platform offers a clean design and smooth navigation, providing a modern and engaging user experience.",
+        "This project is a fully responsive social media platform built with Next.js and MUI, designed to offer a smooth and engaging experience across devices. It features secure authentication, a real-time Home Feed, and interactive profiles that display posts, likes, and activity. Users can create posts, like, and comment through real-time API integration for fast and reliable updates. With its clean interface and intuitive navigation, the platform delivers modern functionality suitable for everyday interaction and scalable enhancements.",
       image: Yonna,
       url: "https://yonna.vercel.app/signin",
       code: "https://github.com/EL-KADI/Yonna",
@@ -487,15 +503,6 @@ export default function Projects() {
         "Responsive Design",
         "Data Visualization",
       ],
-    },
-    {
-      title: "AuddTune",
-      description:
-        "AuddTune is a song recognition platform built with React and Tailwind CSS. It allows users to identify songs by recording audio or uploading an audio file. The platform utilizes the audd.io API for accurate song analysis. It provides an easy-to-use interface to display song information such as the artist's name, song title, and album.",
-      image: auddtuneimage,
-      url: "https://auddtune.vercel.app/",
-      code: "https://github.com/EL-KADI/AuddTune",
-      tags: ["React", "Tailwind CSS", "Audio API", "Music", "Song Recognition"],
     },
     {
       title: "SoundVoyage",
