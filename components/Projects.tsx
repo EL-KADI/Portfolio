@@ -87,7 +87,6 @@ export default function Projects() {
       code: "https://github.com/EL-KADI/Sakeena",
       tags: [
         "Next.js",
-        "React",
         "Tailwind CSS",
         "Prayer Times",
         "Aladhan API",
