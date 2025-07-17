@@ -7,6 +7,8 @@ import { FileText } from "lucide-react";
 import Image from "next/image";
 import MetaCertificate from "../Images/Meta Certificate.jpg";
 import RouteDiploma from "../Images/Route Certificate.png";
+import MicrosoftCertificate from "../Images/Microsoft Certificate.png";
+import IBMCertificate from "../Images/IBM Certificate.png";
 export default function Certificates() {
   const certificates = [
     {
@@ -23,9 +25,27 @@ export default function Certificates() {
       issuer: "Route Academy",
       date: "2025",
       description:
-        "Comprehensive web development training covering front-end technologies, responsive design, and modern JavaScript frameworks.",
+        "Practical front-end diploma covering HTML, CSS, JavaScript, and modern frameworks with hands-on training.",
       image: RouteDiploma,
       url: "/Pdfs/Route Diploma.pdf",
+    },
+    {
+      name: "Microsoft Front-End Developer Certificate",
+      issuer: "Microsoft",
+      date: "2025",
+      description:
+        "Microsoft-certified training in front-end development using HTML, CSS, JavaScript, and advanced UI/UX design principles.",
+      image: MicrosoftCertificate,
+      url: "/Pdfs/Microsoft Diploma.pdf",
+    },
+    {
+      name: "IBM Front-End Developer Certificate",
+      issuer: "IBM",
+      date: "2025",
+      description:
+        "IBM-certified training in front-end development with HTML, CSS, JavaScript, React, and UI/UX best practices.",
+      image: IBMCertificate,
+      url: "/Pdfs/IBM Diploma.pdf",
     },
   ];
 
@@ -78,7 +98,7 @@ export default function Certificates() {
               }}
               className="h-full"
             >
-              <Card className="h-full overflow-hidden border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700 perspective-1000">
+              <Card className="h-full overflow-hidden border-blue-100 ring-blue-300 ring-1 dark:ring-1 dark:ring-gray-700 dark:border-gray-700 transform transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700 perspective-1000">
                 <div className="relative h-72 w-full overflow-hidden">
                   <Image
                     src={certificate.image || "/placeholder.svg"}
