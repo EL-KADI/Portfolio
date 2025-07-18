@@ -1,6 +1,5 @@
 "use client";
-
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
@@ -10,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MaterialKit2 from "../Images/Material Kit 2.png";
@@ -75,10 +74,32 @@ import Reactly from "../Images/Reactly.png";
 import Sakeena from "../Images/Sakeena.png";
 
 export default function Projects() {
-  const [showAll, setShowAll] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [projectsPerPage, setProjectsPerPage] = useState(10);
+  const allProjectsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateProjectsPerPage = () => {
+      if (window.innerWidth >= 1536) {
+        setProjectsPerPage(9);
+      } else if (window.innerWidth >= 1280) {
+        setProjectsPerPage(9);
+      } else if (window.innerWidth >= 1024) {
+        setProjectsPerPage(10);
+      } else if (window.innerWidth >= 768) {
+        setProjectsPerPage(10);
+      } else {
+        setProjectsPerPage(6);
+      }
+    };
+
+    updateProjectsPerPage();
+    window.addEventListener("resize", updateProjectsPerPage);
+    return () => window.removeEventListener("resize", updateProjectsPerPage);
+  }, []);
 
   const projects = [
-      {
+    {
       title: "Sakeena",
       description:
         "Sakeena is a modern bilingual (English/Arabic) web application for displaying Islamic prayer times, developed using Next.js and Tailwind CSS. It provides real-time prayer timings, a 30-day prayer schedule, and displays both Hijri and Gregorian dates. Using the Aladhan API, the app automatically detects the user's location to ensure highly accurate and reliable prayer time information. With a clean, intuitive, and fully responsive design, Sakeena makes it easy to stay connected to your daily prayers—anytime, anywhere, on any device.",
@@ -238,7 +259,6 @@ export default function Projects() {
       tags: ["Next.js", "Tailwind CSS", "Fabric.js", "Design Tool", "jsPDF"],
       featured: true,
     },
-
     {
       title: "Podcast Finder",
       description:
@@ -254,11 +274,10 @@ export default function Projects() {
         "Featured Content",
       ],
     },
-
     {
       title: "AstroVerse",
       description:
-        "AstroVerse is an interactive space exploration platform built with Next.js, Tailwind CSS, Three.js, and GSAP. It leverages the NASA API to deliver real-time astronomical data, including the Astronomy Picture of the Day (APOD), Mars rover photos, and near-Earth object information. The platform offers a responsive, interface with a 3D planet exploration feature, a kids’ educational section with quizzes, and a space missions showcase. Users can save favorite planets or images and enjoy smooth animations for an immersive experience.",
+        "AstroVerse is an interactive space exploration platform built with Next.js, Tailwind CSS, Three.js, and GSAP. It leverages the NASA API to deliver real-time astronomical data, including the Astronomy Picture of the Day (APOD), Mars rover photos, and near-Earth object information. The platform offers a responsive, interface with a 3D planet exploration feature, a kids' educational section with quizzes, and a space missions showcase. Users can save favorite planets or images and enjoy smooth animations for an immersive experience.",
       image: AstroVerse,
       url: "https://astro-verse-mu.vercel.app/",
       code: "https://github.com/EL-KADI/AstroVerse",
@@ -291,7 +310,7 @@ export default function Projects() {
     {
       title: "EraEcho",
       description:
-        "EraEcho is an interactive platform for exploring historical events, built with Next.js, Tailwind CSS, and Framer Motion. It uses the On This Day API to display events for a specific date or year on a dynamic timeline. The responsive interface offers event filtering, a random event feature, a kids’ section, and the ability to save favorites to Local Storage with smooth animations.",
+        "EraEcho is an interactive platform for exploring historical events, built with Next.js, Tailwind CSS, and Framer Motion. It uses the On This Day API to display events for a specific date or year on a dynamic timeline. The responsive interface offers event filtering, a random event feature, a kids' section, and the ability to save favorites to Local Storage with smooth animations.",
       image: EraEcho,
       url: "https://era-echo.vercel.app/",
       code: "https://github.com/EL-KADI/EraEcho",
@@ -307,7 +326,7 @@ export default function Projects() {
     {
       title: "InkVibe",
       description:
-        "InkVibe is a digital library platform built with Next.js, Tailwind CSS, and Swiper.js. It uses the Open Library API to browse and search free books by genre, language, or author. The responsive interface offers a bookshelf, reading lists, a kids’ section with quizzes, and reading stats. Users can save favorites to Local Storage and toggle dark mode.",
+        "InkVibe is a digital library platform built with Next.js, Tailwind CSS, and Swiper.js. It uses the Open Library API to browse and search free books by genre, language, or author. The responsive interface offers a bookshelf, reading lists, a kids' section with quizzes, and reading stats. Users can save favorites to Local Storage and toggle dark mode.",
       image: InkVibe,
       url: "https://ink-vibe.vercel.app/",
       code: "https://github.com/EL-KADI/InkVibe",
@@ -405,7 +424,7 @@ export default function Projects() {
     {
       title: "Sweatly",
       description:
-        "Sweatly is a modern fitness web app built with Next.js, offering personalized workout plans, real-time guidance, calorie tracking, detailed progress charts, and motivational features. It supports dark/light mode, music, notifications, and offline use. Built with Zustand and Framer Motion, it’s fast, responsive, accessible, and mobile-friendly.",
+        "Sweatly is a modern fitness web app built with Next.js, offering personalized workout plans, real-time guidance, calorie tracking, detailed progress charts, and motivational features. It supports dark/light mode, music, notifications, and offline use. Built with Zustand and Framer Motion, it's fast, responsive, accessible, and mobile-friendly.",
       image: Sweatly,
       url: "https://sweatly.vercel.app/",
       code: "https://github.com/EL-KADI/Sweatly",
@@ -939,6 +958,99 @@ export default function Projects() {
 
   const featuredProjects = projects.filter((project) => project.featured);
 
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const endIndex = startIndex + projectsPerPage;
+  const currentProjects = projects.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    if (allProjectsRef.current) {
+      const elementPosition = allProjectsRef.current.offsetTop - 120;
+      window.scrollTo({ top: elementPosition, behavior: "smooth" });
+    }
+  };
+
+  const renderPageNumbers = () => {
+    const pages = [];
+
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
+    }
+
+    return pages;
+  };
+
+  interface PaginationControlsProps {
+    startIndex: number;
+    endIndex: number;
+    totalProjects: number;
+  }
+
+  const PaginationControls = ({
+    startIndex,
+    endIndex,
+    totalProjects,
+  }: PaginationControlsProps) => {
+    const pageNumbers = renderPageNumbers();
+
+    const renderPaginationRows = () => {
+      return (
+        <div className="flex items-center justify-center gap-2 mb-2 flex-wrap">
+          {pageNumbers.map((page, index) => (
+            <Button
+              key={`page-${page}`}
+              variant={currentPage === page ? "default" : "outline"}
+              size="sm"
+              onClick={() => handlePageChange(page as number)}
+              className={
+                currentPage === page
+                  ? "bg-gradient-to-r from-blue-500 to-purple-600"
+                  : ""
+              }
+            >
+              {page}
+            </Button>
+          ))}
+        </div>
+      );
+    };
+
+    return (
+      <div className="flex flex-col items-center justify-center gap-4 my-8">
+        <div className="text-center text-gray-600 dark:text-gray-300 mb-4">
+          <p className="text-sm">
+            Showing projects {startIndex + 1} to{" "}
+            {Math.min(endIndex, totalProjects)} of {totalProjects} total
+          </p>
+        </div>
+        <div className="flex items-center justify-center gap-4">
+          <Button
+            variant="outline"
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="gap-2"
+          >
+            <ChevronLeft className="h-4 w-4" />
+            Previous
+          </Button>
+
+          <Button
+            variant="outline"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="gap-2"
+          >
+            Next
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+        </div>
+
+        {renderPaginationRows()}
+      </div>
+    );
+  };
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -1048,7 +1160,7 @@ export default function Projects() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900"
+                          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
                         >
                           <ExternalLink className="h-4 w-4" />
                           View
@@ -1062,7 +1174,7 @@ export default function Projects() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900"
+                          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
                         >
                           <Github className="h-4 w-4" />
                           Code
@@ -1076,19 +1188,17 @@ export default function Projects() {
           </motion.div>
         </TabsContent>
 
-        <TabsContent
-          value="all"
-          key={showAll ? "all-expanded" : "all-collapsed"}
-        >
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {(showAll ? projects : projects.slice(0, 9)).map(
-              (project, index) => (
-                <motion.div key={index} variants={item}>
+        <TabsContent value="all">
+          <div ref={allProjectsRef}>
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate="show"
+              key={currentPage}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6"
+            >
+              {currentProjects.map((project, index) => (
+                <motion.div key={`${currentPage}-${index}`} variants={item}>
                   <motion.div
                     whileHover={{
                       scale: 1.03,
@@ -1115,7 +1225,7 @@ export default function Projects() {
                           {project.title}
                         </CardTitle>
                       </CardHeader>
-                      <CardContent className="flex-grow overflow-y-auto max-h-80">
+                      <CardContent className="flex-grow overflow-y-auto max-h-80 md:max-h-40 lg:max-h-80 xl:max-h-52 2xl:max-h-80">
                         <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
                           {project.description}
                         </p>
@@ -1139,7 +1249,7 @@ export default function Projects() {
                           <Button
                             variant="outline"
                             size="sm"
-                            className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900"
+                            className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
                           >
                             <ExternalLink className="h-4 w-4" />
                             View
@@ -1153,7 +1263,7 @@ export default function Projects() {
                           <Button
                             variant="outline"
                             size="sm"
-                            className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900"
+                            className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
                           >
                             <Github className="h-4 w-4" />
                             Code
@@ -1163,25 +1273,15 @@ export default function Projects() {
                     </Card>
                   </motion.div>
                 </motion.div>
-              )
-            )}
-          </motion.div>
+              ))}
+            </motion.div>
+          </div>
 
-          {!showAll && projects.length > 9 && (
-            <div className="text-center mt-8">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  onClick={() => setShowAll(true)}
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
-                >
-                  Show All Projects ({projects.length})
-                </Button>
-              </motion.div>
-            </div>
-          )}
+          <PaginationControls
+            startIndex={startIndex}
+            endIndex={endIndex}
+            totalProjects={projects.length}
+          />
         </TabsContent>
       </Tabs>
     </div>

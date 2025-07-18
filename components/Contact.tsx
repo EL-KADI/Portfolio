@@ -122,13 +122,13 @@ export default function Contact() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="md:col-span-1"
+          className="lg:col-span-1"
         >
           <div className="space-y-6">
             <motion.div whileHover={{ scale: 1.05 }} className="h-full">
@@ -166,7 +166,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="md:col-span-2"
+          className="lg:col-span-2"
         >
           <motion.div whileHover={{ scale: 1.02 }} className="h-full">
             <Card className="h-full border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700">
