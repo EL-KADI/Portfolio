@@ -139,4 +139,20 @@ body {
   transform: translateY(-10px) rotateY(5deg);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
+@keyframes meteor {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(215deg) translateX(-500px);
+    opacity: 0;
+  }
+}
 
+.animate-meteor-effect {
+  animation: meteor 5s linear infinite;
+}

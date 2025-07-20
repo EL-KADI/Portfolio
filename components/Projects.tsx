@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Meteors } from "../components/ui/meteors";
 import {
   Card,
   CardContent,
@@ -100,21 +101,21 @@ export default function Projects() {
   }, []);
 
   const projects = [
-{
-  title: "Noor",
-  description:
-    "Noor is a comprehensive Islamic web application built with Next.js and TypeScript, offering a rich digital Islamic experience. The platform features Quran reading with translations and audio recitation, a Hadith collection from major Islamic books, and a smart, user-friendly favorites system. It includes sections for Ramadan, Islamic education, daily Adhkar, and a Hijri calendar with prayer times. With multilingual support (over 10 languages), dark/light mode, and responsive design, Noor serves as your Islamic companion for spiritual growth and worship.",
-  image: Noor,
-  url: "https://noor-murex.vercel.app/",
-  code: "https://github.com/EL-KADI/Noor",
-  tags: [
-    "Next.js",
-    "Quran API",
-    "Prayer Times",
-    "Hijri Calendar",
-    "Multilingual",
-  ],
-},
+    {
+      title: "Noor",
+      description:
+        "Noor is a comprehensive Islamic web application built with Next.js and TypeScript, offering a rich digital Islamic experience. The platform features Quran reading with translations and audio recitation, a Hadith collection from major Islamic books, and a smart, user-friendly favorites system. It includes sections for Ramadan, Islamic education, daily Adhkar, and a Hijri calendar with prayer times. With multilingual support (over 10 languages), dark/light mode, and responsive design, Noor serves as your Islamic companion for spiritual growth and worship.",
+      image: Noor,
+      url: "https://noor-murex.vercel.app/",
+      code: "https://github.com/EL-KADI/Noor",
+      tags: [
+        "Next.js",
+        "Quran API",
+        "Prayer Times",
+        "Hijri Calendar",
+        "Multilingual",
+      ],
+    },
     {
       title: "Yonna (Social App)",
       description:
@@ -333,7 +334,7 @@ export default function Projects() {
       code: "https://github.com/EL-KADI/InkVibe",
       tags: ["Next.js", "Tailwind CSS", "Open Library API", "Digital Library"],
     },
-        {
+    {
       title: "Sakeena",
       description:
         "Sakeena is a modern bilingual (English/Arabic) web application for displaying Islamic prayer times, developed using Next.js and Tailwind CSS. It provides real-time prayer timings, a 30-day prayer schedule, and displays both Hijri and Gregorian dates. Using the Aladhan API, the app automatically detects the user's location to ensure highly accurate and reliable prayer time information. With a clean, intuitive, and fully responsive design, Sakeena makes it easy to stay connected to your daily prayers—anytime, anywhere, on any device.",
@@ -1129,75 +1130,84 @@ export default function Projects() {
                 <motion.div
                   whileHover={{
                     scale: 1.03,
-                    rotateY: 5,
                     boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
                   }}
                   className="h-full"
                 >
-                  <Card className="h-full flex flex-col overflow-hidden border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700">
-                    <div className="relative h-72 w-full overflow-hidden">
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        fill
-                        className="object-cover object-center transition-transform hover:scale-110 duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <h3 className="text-white font-bold text-lg">
-                          {project.title}
-                        </h3>
-                      </div>
-                    </div>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-xl">{project.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-grow overflow-y-auto max-h-80 md:max-h-40 lg:max-h-80 xl:max-h-52 2xl:max-h-80">
-                      <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                        {project.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mt-auto">
-                        {project.tags &&
-                          project.tags.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="text-xs px-2 py-1 rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                      </div>
-                    </CardContent>
-                    <CardFooter className="flex justify-between pt-2">
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
-                        >
-                          <ExternalLink className="h-4 w-4" />
-                          View
-                        </Button>
-                      </a>
-                      <a
-                        href={project.code}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
-                        >
-                          <Github className="h-4 w-4" />
-                          Code
-                        </Button>
-                      </a>
-                    </CardFooter>
-                  </Card>
+              <Card className="h-full flex flex-col border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700">
+  <div className="relative h-72 w-full overflow-hidden">
+    <Image
+      src={project.image || "/placeholder.svg"}
+      alt={project.title}
+      fill
+      className="object-cover object-center transition-transform hover:scale-110 duration-700"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+      <h3 className="text-white font-bold text-lg">
+        {project.title}
+      </h3>
+    </div>
+  </div>
+  <div className="relative flex flex-col flex-grow">
+    <div className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none">
+      <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500/5 to-purple-600/5" />
+      <div className="relative h-full w-full">
+        <Meteors number={5} />
+      </div>
+    </div>
+    <CardHeader className="pb-2">
+      <CardTitle className="text-xl">
+        {project.title}
+      </CardTitle>
+    </CardHeader>
+    <CardContent className="flex-grow overflow-y-auto max-h-80 md:max-h-40 lg:max-h-80 xl:max-h-52 2xl:max-h-80">
+      <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+        {project.description}
+      </p>
+      <div className="flex flex-wrap gap-2 mt-auto">
+        {project.tags &&
+          project.tags.map((tag, tagIndex) => (
+            <span
+              key={tagIndex}
+              className="text-xs px-2 py-1 rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300"
+            >
+              {tag}
+            </span>
+          ))}
+      </div>
+    </CardContent>
+    <CardFooter className="flex justify-between pt-2">
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button
+          variant="outline"
+          size="sm"
+          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
+        >
+          <ExternalLink className="h-4 w-4" />
+          View
+        </Button>
+      </a>
+      <a
+        href={project.code}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button
+          variant="outline"
+          size="sm"
+          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
+        >
+          <Github className="h-4 w-4" />
+          Code
+        </Button>
+      </a>
+    </CardFooter>
+  </div>
+</Card>
                 </motion.div>
               </motion.div>
             ))}
@@ -1236,56 +1246,65 @@ export default function Projects() {
                           </h3>
                         </div>
                       </div>
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-lg">
-                          {project.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-grow overflow-y-auto max-h-80 md:max-h-40 lg:max-h-80 xl:max-h-52 2xl:max-h-80">
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
-                          {project.description}
-                        </p>
-                        <div className="flex flex-wrap gap-1 mt-auto">
-                          {project.tags?.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="text-xs px-2 py-0.5 rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300"
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                      <div className="relative flex flex-col flex-grow">
+                        <div className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none">
+                          <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500/5 to-purple-600/5" />
+                          <div className="relative h-full w-full">
+                            <Meteors number={5} />
+                          </div>
                         </div>
-                      </CardContent>
-                      <CardFooter className="flex justify-between pt-2">
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
+
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-lg">
+                            {project.title}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow overflow-y-auto max-h-80 md:max-h-40 lg:max-h-80 xl:max-h-52 2xl:max-h-80">
+                          <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
+                            {project.description}
+                          </p>
+                          <div className="flex flex-wrap gap-1 mt-auto">
+                            {project.tags?.map((tag, tagIndex) => (
+                              <span
+                                key={tagIndex}
+                                className="text-xs px-2 py-0.5 rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </CardContent>
+                        <CardFooter className="flex justify-between pt-2">
+                          <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
-                            <ExternalLink className="h-4 w-4" />
-                            View
-                          </Button>
-                        </a>
-                        <a
-                          href={project.code}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              View
+                            </Button>
+                          </a>
+                          <a
+                            href={project.code}
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
-                            <Github className="h-4 w-4" />
-                            Code
-                          </Button>
-                        </a>
-                      </CardFooter>
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
+                            >
+                              <Github className="h-4 w-4" />
+                              Code
+                            </Button>
+                          </a>
+                        </CardFooter>
+                      </div>
                     </Card>
                   </motion.div>
                 </motion.div>
