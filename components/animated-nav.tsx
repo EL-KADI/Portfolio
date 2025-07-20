@@ -227,7 +227,7 @@ function MobileNav({
   ];
 
   return (
-    <ul className="flex sm:hidden justify-center custom-media space-x-2 text-[11px] sm:text-[16px]">
+    <ul className="flex sm:hidden justify-center custom-media  space-x-2 text-[13px] sm:text-[16px]">
       {items.map((item, index) => (
         <motion.li key={item} className="relative">
           <motion.button
