@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import { AnimatedNav } from "../components/animated-nav";
 import { motion, useScroll, useSpring } from "framer-motion";
 import "@/styles/globals.css";
 
@@ -109,7 +110,7 @@ export default function Home() {
 
         <button
           onClick={toggleTheme}
-          className="fixed top-4 right-4 z-50 p-2 translate-y-14 -translate-x-5 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors transform hover:scale-110"
+          className="fixed top-4 right-4 z-50 p-2 translate-y-14 -translate-x-5 sm:translate-y-[5.5rem] rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors transform hover:scale-110"
           aria-label="Toggle theme"
         >
           {theme === "light" ? (
@@ -120,22 +121,11 @@ export default function Home() {
         </button>
 
         <nav className="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-          <div className="container mx-auto px-4 py-3">
-            <ul className="flex justify-center sm:space-x-8 custom-media space-x-4 text-sm sm:text-[16px]">
-              {["Home", "Skills", "Projects", "Certificates", "Contact"].map(
-                (item) => (
-                  <li key={item}>
-                    <button
-                      onClick={() => scrollToSection(item.toLowerCase())}
-                      className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors relative group"
-                    >
-                      {item}
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
-                    </button>
-                  </li>
-                )
-              )}
-            </ul>
+          <div className="container mx-auto px-4 py-3 sm:py-4 sm:mt-[7.5px] ">
+            <AnimatedNav
+              items={["Home", "Skills", "Projects", "Certificates", "Contact"]}
+              onItemClick={scrollToSection}
+            />
           </div>
         </nav>
 

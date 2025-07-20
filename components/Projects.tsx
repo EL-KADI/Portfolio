@@ -72,6 +72,7 @@ import Utilix from "../Images/Utilix.png";
 import Sweatly from "../Images/Sweatly.png";
 import Reactly from "../Images/Reactly.png";
 import Sakeena from "../Images/Sakeena.png";
+import Noor from "../Images/Noor.png";
 
 export default function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -99,21 +100,21 @@ export default function Projects() {
   }, []);
 
   const projects = [
-    {
-      title: "Sakeena",
-      description:
-        "Sakeena is a modern bilingual (English/Arabic) web application for displaying Islamic prayer times, developed using Next.js and Tailwind CSS. It provides real-time prayer timings, a 30-day prayer schedule, and displays both Hijri and Gregorian dates. Using the Aladhan API, the app automatically detects the user's location to ensure highly accurate and reliable prayer time information. With a clean, intuitive, and fully responsive design, Sakeena makes it easy to stay connected to your daily prayers—anytime, anywhere, on any device.",
-      image: Sakeena,
-      url: "https://sakeena-five.vercel.app/",
-      code: "https://github.com/EL-KADI/Sakeena",
-      tags: [
-        "Next.js",
-        "Tailwind CSS",
-        "Prayer Times",
-        "Aladhan API",
-        "Localization",
-      ],
-    },
+{
+  title: "Noor",
+  description:
+    "Noor is a comprehensive Islamic web application built with Next.js and TypeScript, offering a rich digital Islamic experience. The platform features Quran reading with translations and audio recitation, a Hadith collection from major Islamic books, and a smart, user-friendly favorites system. It includes sections for Ramadan, Islamic education, daily Adhkar, and a Hijri calendar with prayer times. With multilingual support (over 10 languages), dark/light mode, and responsive design, Noor serves as your Islamic companion for spiritual growth and worship.",
+  image: Noor,
+  url: "https://noor-murex.vercel.app/",
+  code: "https://github.com/EL-KADI/Noor",
+  tags: [
+    "Next.js",
+    "Quran API",
+    "Prayer Times",
+    "Hijri Calendar",
+    "Multilingual",
+  ],
+},
     {
       title: "Yonna (Social App)",
       description:
@@ -153,7 +154,7 @@ export default function Projects() {
     {
       title: "FreshCart (E-Commerce App)",
       description:
-        "This project is a fully integrated e-commerce website with a Login Page and Home Page. It dynamically fetches content from APIs, offering a wide range of products, deals, and discounts. Users can browse items seamlessly, enjoying a clean design and interactive interface.",
+        "FreshCart is a responsive and modern e-commerce web application featuring a secure login page and a clean, well-organized home page. It fetches product data dynamically from APIs, showcasing a variety of categories, offers, best-selling items, trending products, and real-time discounts updated regularly for users across all devices. The app provides smooth navigation, fast loading times, an interactive user interface, and a seamless browsing experience, allowing users to explore products easily and enjoy an efficient, enjoyable, and mobile-friendly online shopping journey with consistent performance.",
       image: FreshCart,
       url: "https://fresh-cart-virid-beta.vercel.app/",
       code: "https://github.com/EL-KADI/FreshCart-E-commerce-App",
@@ -178,7 +179,7 @@ export default function Projects() {
     {
       title: "BitPulse",
       description:
-        "BitPulse is a financial data platform built with Next.js and Tailwind CSS. It provides real-time and historical price data for traditional currencies (e.g., USD/EGP) and cryptocurrencies (e.g., Bitcoin, Ethereum). The platform utilizes ExchangeRate-API for currency exchange rates and CoinGecko API for crypto prices, displayed through interactive Chart.js visualizations. It features a clean, responsive interface with a currency converter and time-range filters for data analysis.",
+        "BitPulse is a financial data platform built with Next.js and Tailwind CSS. It provides real-time and historical price data for traditional currencies (e.g., USD/EGP) and cryptocurrencies (e.g., Bitcoin, Ethereum). The platform utilizes ExchangeRate-API for currency exchange rates and CoinGecko API for crypto prices, displayed through interactive Chart.js visualizations and updated automatically. It features a clean, responsive interface with a currency converter, time-range filters for data analysis, optimized performance across all devices, and support for dark mode and multiple languages to enhance user experience.",
       image: BitPulse,
       url: "https://bit-pulse-iota.vercel.app/",
       code: "https://github.com/EL-KADI/BitPulse",
@@ -331,6 +332,21 @@ export default function Projects() {
       url: "https://ink-vibe.vercel.app/",
       code: "https://github.com/EL-KADI/InkVibe",
       tags: ["Next.js", "Tailwind CSS", "Open Library API", "Digital Library"],
+    },
+        {
+      title: "Sakeena",
+      description:
+        "Sakeena is a modern bilingual (English/Arabic) web application for displaying Islamic prayer times, developed using Next.js and Tailwind CSS. It provides real-time prayer timings, a 30-day prayer schedule, and displays both Hijri and Gregorian dates. Using the Aladhan API, the app automatically detects the user's location to ensure highly accurate and reliable prayer time information. With a clean, intuitive, and fully responsive design, Sakeena makes it easy to stay connected to your daily prayers—anytime, anywhere, on any device.",
+      image: Sakeena,
+      url: "https://sakeena-five.vercel.app/",
+      code: "https://github.com/EL-KADI/Sakeena",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Prayer Times",
+        "Aladhan API",
+        "Localization",
+      ],
     },
     {
       title: "SiteScan",
