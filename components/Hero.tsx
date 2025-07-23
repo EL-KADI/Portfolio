@@ -9,7 +9,6 @@ import {
   FacebookIcon,
   InstagramIcon,
   Download,
-  Code,
   Award,
   Briefcase,
   User,
@@ -18,10 +17,77 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const useCountUp = (end: number, duration = 2000, delay = 0) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasStarted(true);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [delay]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(easeOutQuart * end);
+
+      setCount(currentCount);
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [end, duration, hasStarted]);
+
+  return count;
+};
 
 export default function Hero() {
+  const calculateAge = (birthDate: Date): number => {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birth.getDate())
+    ) {
+      age--;
+    }
+
+    return age;
+  };
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+  const currentAge = calculateAge(new Date(2002, 3, 5));
+  const ageCount = useCountUp(currentAge, 2000, 500);
+  const projectsCount = useCountUp(60, 2500, 700);
+  const certificatesCount = useCountUp(4, 1500, 900);
+  const experienceCount = useCountUp(1, 1000, 1100);
 
   const toggleSection = (section: string) => {
     setExpandedSection(expandedSection === section ? null : section);
@@ -174,7 +240,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -187,7 +252,7 @@ export default function Hero() {
         >
           <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              23
+              {ageCount}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               Years Old
@@ -195,7 +260,7 @@ export default function Hero() {
           </div>
           <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-              60+
+              {projectsCount}+
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               Projects
@@ -203,7 +268,7 @@ export default function Hero() {
           </div>
           <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-              4
+              {certificatesCount}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               Certificates
@@ -211,7 +276,7 @@ export default function Hero() {
           </div>
           <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">
-              1+
+              {experienceCount}+
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-400">
               Year Experience
@@ -231,9 +296,9 @@ export default function Hero() {
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             I'm a Front-End Developer with practical experience in building
             modern, responsive, and user-friendly web applications using React
-            and Next.js. I’ve completed professional certifications from Meta
+            and Next.js. I've completed professional certifications from Meta
             (via Coursera), IBM, and Microsoft, and hold a Front-End Development
-            Diploma from Route Academy. Throughout my journey, I’ve built over
+            Diploma from Route Academy. Throughout my journey, I've built over
             60 diverse projects — including e-commerce platforms, portfolio
             websites, and custom applications inspired by major platforms like
             Facebook and Instagram. I focus on performance, clean code, and
@@ -299,7 +364,6 @@ export default function Hero() {
               </div>
             </motion.div>
           </motion.div>
-
           <motion.div
             variants={itemVariants}
             className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden"

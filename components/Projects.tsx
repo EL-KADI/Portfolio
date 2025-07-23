@@ -74,6 +74,7 @@ import Sweatly from "../Images/Sweatly.png";
 import Reactly from "../Images/Reactly.png";
 import Sakeena from "../Images/Sakeena.png";
 import Noor from "../Images/Noor.png";
+import Morphix from "../Images/Morphix.png";
 
 export default function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -334,6 +335,21 @@ export default function Projects() {
       code: "https://github.com/EL-KADI/InkVibe",
       tags: ["Next.js", "Tailwind CSS", "Open Library API", "Digital Library"],
     },
+    {
+  title: "Morphix",
+  description:
+    "Morphix is a dynamic web app built with Next.js, to convert images and videos between formats using modern technologies. Featuring an intuitive upload system with drag-and-drop, Morphix offers a responsive interface styled with Tailwind CSS, enhanced with Framer Motion, and accessible via clean design. Conversions are processed client-side using HTML5 Canvas and optimized algorithms, with temporary storage in LocalStorage. Morphix is a compelling portfolio showcasing expertise in file processing, modern UI/UX, and user-centric development.",
+  image: Morphix,
+  url: "https://morphix-three.vercel.app/",
+  code: "https://github.com/EL-KADI/Morphix",
+  tags: [
+    "Next.js",
+    "Tailwind CSS",
+    "File Conversion",
+    "Canvas API",
+    "Framer Motion",
+  ],
+},
     {
       title: "Sakeena",
       description:
