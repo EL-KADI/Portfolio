@@ -75,6 +75,7 @@ import Reactly from "../Images/Reactly.png";
 import Sakeena from "../Images/Sakeena.png";
 import Noor from "../Images/Noor.png";
 import Morphix from "../Images/Morphix.png";
+import Calc from "../Images/Calc.png";
 
 export default function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -336,20 +337,20 @@ export default function Projects() {
       tags: ["Next.js", "Tailwind CSS", "Open Library API", "Digital Library"],
     },
     {
-  title: "Morphix",
-  description:
-    "Morphix is a dynamic web app built with Next.js, to convert images and videos between formats using modern technologies. Featuring an intuitive upload system with drag-and-drop, Morphix offers a responsive interface styled with Tailwind CSS, enhanced with Framer Motion, and accessible via clean design. Conversions are processed client-side using HTML5 Canvas and optimized algorithms, with temporary storage in LocalStorage. Morphix is a compelling portfolio showcasing expertise in file processing, modern UI/UX, and user-centric development.",
-  image: Morphix,
-  url: "https://morphix-three.vercel.app/",
-  code: "https://github.com/EL-KADI/Morphix",
-  tags: [
-    "Next.js",
-    "Tailwind CSS",
-    "File Conversion",
-    "Canvas API",
-    "Framer Motion",
-  ],
-},
+      title: "Morphix",
+      description:
+        "Morphix is a dynamic web app built with Next.js, to convert images and videos between formats using modern technologies. Featuring an intuitive upload system with drag-and-drop, Morphix offers a responsive interface styled with Tailwind CSS, enhanced with Framer Motion, and accessible via clean design. Conversions are processed client-side using HTML5 Canvas and optimized algorithms, with temporary storage in LocalStorage. Morphix is a compelling portfolio showcasing expertise in file processing, modern UI/UX, and user-centric development.",
+      image: Morphix,
+      url: "https://morphix-three.vercel.app/",
+      code: "https://github.com/EL-KADI/Morphix",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "File Conversion",
+        "Canvas API",
+        "Framer Motion",
+      ],
+    },
     {
       title: "Sakeena",
       description:
@@ -862,9 +863,25 @@ export default function Projects() {
       tags: ["Next.js", "BMI Calculator", "Responsive Design"],
     },
     {
+      title: "CALC",
+      description:
+        "This Calculator is a modern web application for complex computations, built with Next.js and Tailwind CSS. It includes scientific functions like trigonometry, logarithms, and powers, with memory operations. The interface supports mouse and keyboard input. With its sleek design and dark/light mode, it delivers accurate results for students and professionals on any device.",
+      image: Calc,
+      url: "https://calc-gamma-sepia.vercel.app/",
+      code: "https://github.com/EL-KADI/CALC",
+      tags: [
+        "Next.js",
+        "Tailwind CSS",
+        "Scientific Calculator",
+        "Mathematics",
+        "Dark Mode",
+        "Keyboard Support",
+      ],
+    },
+    {
       title: "FoodDex",
       description:
-        "This project is a web page showcasing various dishes with their recipes and calorie counts. Built using SASS, it offers a visually appealing interface. Users can explore meals, learn preparation methods, and track nutritional value effortlessly.",
+        "This project is a web page showcasing various dishes with their recipes and calorie counts. Built using SASS, it offers a visually appealing interface. Users can explore meals, learn preparation methods, and track nutritional value effortlessly. It also includes a responsive design, smooth transitions, search functionality, and a categorized layout to enhance user experience across all devices.",
       image: FoodDex,
       url: "https://fooddex.vercel.app/",
       code: "https://github.com/EL-KADI/FoodDex",
@@ -1150,80 +1167,80 @@ export default function Projects() {
                   }}
                   className="h-full"
                 >
-              <Card className="h-full flex flex-col border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700">
-  <div className="relative h-72 w-full overflow-hidden">
-    <Image
-      src={project.image || "/placeholder.svg"}
-      alt={project.title}
-      fill
-      className="object-cover object-center transition-transform hover:scale-110 duration-700"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-      <h3 className="text-white font-bold text-lg">
-        {project.title}
-      </h3>
-    </div>
-  </div>
-  <div className="relative flex flex-col flex-grow">
-    <div className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none">
-      <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500/5 to-purple-600/5" />
-      <div className="relative h-full w-full">
-        <Meteors number={5} />
-      </div>
-    </div>
-    <CardHeader className="pb-2">
-      <CardTitle className="text-xl">
-        {project.title}
-      </CardTitle>
-    </CardHeader>
-    <CardContent className="flex-grow overflow-y-auto max-h-80 md:max-h-40 lg:max-h-80 xl:max-h-52 2xl:max-h-80">
-      <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-        {project.description}
-      </p>
-      <div className="flex flex-wrap gap-2 mt-auto">
-        {project.tags &&
-          project.tags.map((tag, tagIndex) => (
-            <span
-              key={tagIndex}
-              className="text-xs px-2 py-1 rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300"
-            >
-              {tag}
-            </span>
-          ))}
-      </div>
-    </CardContent>
-    <CardFooter className="flex justify-between pt-2">
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Button
-          variant="outline"
-          size="sm"
-          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
-        >
-          <ExternalLink className="h-4 w-4" />
-          View
-        </Button>
-      </a>
-      <a
-        href={project.code}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Button
-          variant="outline"
-          size="sm"
-          className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
-        >
-          <Github className="h-4 w-4" />
-          Code
-        </Button>
-      </a>
-    </CardFooter>
-  </div>
-</Card>
+                  <Card className="h-full flex flex-col border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700">
+                    <div className="relative h-72 w-full overflow-hidden">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        fill
+                        className="object-cover object-center transition-transform hover:scale-110 duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <h3 className="text-white font-bold text-lg">
+                          {project.title}
+                        </h3>
+                      </div>
+                    </div>
+                    <div className="relative flex flex-col flex-grow">
+                      <div className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none">
+                        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500/5 to-purple-600/5" />
+                        <div className="relative h-full w-full">
+                          <Meteors number={5} />
+                        </div>
+                      </div>
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-xl">
+                          {project.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex-grow overflow-y-auto max-h-80 md:max-h-40 lg:max-h-80 xl:max-h-52 2xl:max-h-80">
+                        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                          {project.description}
+                        </p>
+                        <div className="flex flex-wrap gap-2 mt-auto">
+                          {project.tags &&
+                            project.tags.map((tag, tagIndex) => (
+                              <span
+                                key={tagIndex}
+                                className="text-xs px-2 py-1 rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-300"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                        </div>
+                      </CardContent>
+                      <CardFooter className="flex justify-between pt-2">
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                            View
+                          </Button>
+                        </a>
+                        <a
+                          href={project.code}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="gap-1 hover:bg-primary-100 dark:hover:bg-primary-900 bg-transparent"
+                          >
+                            <Github className="h-4 w-4" />
+                            Code
+                          </Button>
+                        </a>
+                      </CardFooter>
+                    </div>
+                  </Card>
                 </motion.div>
               </motion.div>
             ))}

@@ -301,7 +301,7 @@ export default function Hero() {
             Diploma from Route Academy. Throughout my journey, I've built over
             60 diverse projects — including e-commerce platforms, portfolio
             websites, and custom applications inspired by major platforms like
-            Facebook and Instagram. I focus on performance, clean code, and
+            Facebook and Youtube. I focus on performance, clean code, and
             delivering seamless user experiences that follow the latest web
             standards and best practices.
           </p>
@@ -354,11 +354,10 @@ export default function Hero() {
                     practices.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300">
-                    These projects included concepts inspired by popular
-                    platforms like YouTube and Facebook, as well as a wide range
-                    of original and creative ideas — all delivered with seamless
-                    functionality and high-quality standards aligned with modern
-                    web practices.
+                    These projects featured a wide range of original and
+                    creative ideas — all delivered with seamless functionality
+                    and high-quality standards aligned with modern web
+                    practices.
                   </p>
                 </div>
               </div>
