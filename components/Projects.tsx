@@ -76,6 +76,7 @@ import Sakeena from "../Images/Sakeena.png";
 import Noor from "../Images/Noor.png";
 import Morphix from "../Images/Morphix.png";
 import Calc from "../Images/Calc.png";
+import Timelyo from "../Images/Timelyo.png";
 
 export default function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -878,6 +879,21 @@ export default function Projects() {
         "Keyboard Support",
       ],
     },
+    {
+  title: "Timelyo",
+  description:
+    "Timelyo is a bilingual web application for dual calendar systems, built with Next.js and Tailwind CSS. It enables switching between Gregorian and Hijri calendars, marks dates, and shows both simultaneously. Using advanced algorithms, it auto-converts between systems to ensure accurate date information. With a clean, responsive design, Timelyo keeps you organized—anytime, anywhere.",
+  image: Timelyo,
+  url: "https://timelyo.vercel.app/",
+  code: "https://github.com/EL-KADI/Timelyo",
+  tags: [
+    "Next.js",
+    "Tailwind CSS",
+    "Dual Calendar",
+    "Date Conversion",
+    "Localization",
+  ],
+},
     {
       title: "FoodDex",
       description:
