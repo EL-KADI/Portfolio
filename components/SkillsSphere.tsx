@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
-import { Text, Float } from "@react-three/drei";
-import type { Group } from "three";
+import { useRef } from "react"
+import { useFrame } from "@react-three/fiber"
+import { Text, Float } from "@react-three/drei"
+import type { Group } from "three"
 
 interface SkillsSphereProps {
-  position: [number, number, number];
-  scale: number;
+  position: [number, number, number]
+  scale: number
 }
 
 export default function SkillsSphere({ position, scale }: SkillsSphereProps) {
-  const sphereRef = useRef<Group>(null);
+  const sphereRef = useRef<Group>(null)
 
   const skills = [
     { name: "HTML", color: "#E34F26", position: [0, 2, 0] as [number, number, number] },
@@ -28,13 +28,13 @@ export default function SkillsSphere({ position, scale }: SkillsSphereProps) {
     { name: "jQuery", color: "#0769AD", position: [-1, 0, 1.5] as [number, number, number] },
     { name: "npm", color: "#CB3837", position: [1, 0, -1.5] as [number, number, number] },
     { name: "Flowbite", color: "#38BDF8", position: [-1, 0, -1.5] as [number, number, number] },
-  ];
+  ]
 
   useFrame((state) => {
     if (sphereRef.current) {
-      sphereRef.current.rotation.y = state.clock.elapsedTime * 0.1;
+      sphereRef.current.rotation.y = state.clock.elapsedTime * 0.1
     }
-  });
+  })
 
   return (
     <group position={position} scale={scale} ref={sphereRef}>
@@ -81,5 +81,5 @@ export default function SkillsSphere({ position, scale }: SkillsSphereProps) {
         </Float>
       ))}
     </group>
-  );
+  )
 }

@@ -17,8 +17,6 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
-import { useToast } from "@/hooks/use-toast";
-import { Toaster } from "@/components/ui/toaster";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import { AnimatedNav } from "../components/animated-nav";
 import {
@@ -30,6 +28,11 @@ import {
   useTransform,
 } from "framer-motion";
 import "@/styles/globals.css";
+import ContactSEO from "@/components/seo/contact-seo";
+import SkillsSEO from "@/components/seo/skills-seo";
+import ProjectsSEO from "@/components/seo/projects-seo";
+import HomeSEO from "@/components/seo/home-seo";
+import CertificatesSEO from "@/components/seo/certificates-seo";
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -37,7 +40,6 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosingMenu, setIsClosingMenu] = useState(false);
-  const { toast } = useToast();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -246,24 +248,29 @@ export default function Home() {
 
         <div className="container mx-auto px-4 pt-20">
           <section id="home" className="min-h-screen flex items-center py-20">
+            <HomeSEO />
             <Hero />
           </section>
           <section id="skills" className="min-h-screen flex items-center py-20">
+            <SkillsSEO />
             <Skills />
           </section>
           <section id="projects" className="min-h-screen py-20">
+            <ProjectsSEO />
             <Projects />
           </section>
           <section
             id="certificates"
             className="min-h-screen flex items-center py-20"
           >
+            <CertificatesSEO />
             <Certificates />
           </section>
           <section
             id="contact"
             className="min-h-screen flex items-center py-20"
           >
+            <ContactSEO />
             <Contact />
           </section>
         </div>
@@ -278,7 +285,6 @@ export default function Home() {
             </p>
           </div>
         </footer>
-        <Toaster />
       </main>
     </ThemeProvider>
   );

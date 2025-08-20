@@ -1,29 +1,19 @@
-"use client";
+"use client"
 
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  AnimatePresence,
-} from "framer-motion";
-import { useRef, useState } from "react";
+import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from "framer-motion"
+import { useRef, useState } from "react"
 
 interface AnimatedNavProps {
-  items: string[];
-  onItemClick: (item: string) => void;
-  className?: string;
+  items: string[]
+  onItemClick: (item: string) => void
+  className?: string
 }
 
-export const AnimatedNav = ({
-  items,
-  onItemClick,
-  className,
-}: AnimatedNavProps) => {
-  const mouseX = useMotionValue(Number.POSITIVE_INFINITY);
+export const AnimatedNav = ({ items, onItemClick, className }: AnimatedNavProps) => {
+  const mouseX = useMotionValue(Number.POSITIVE_INFINITY)
 
   return (
-    <>
+    <nav>
       <motion.ul
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Number.POSITIVE_INFINITY)}
@@ -42,9 +32,9 @@ export const AnimatedNav = ({
       </motion.ul>
 
       <MobileNav items={items} onItemClick={onItemClick} />
-    </>
-  );
-};
+    </nav>
+  )
+}
 
 function AnimatedNavItem({
   item,
@@ -53,27 +43,27 @@ function AnimatedNavItem({
   onItemClick,
   totalItems,
 }: {
-  item: string;
-  index: number;
-  mouseX: any;
-  onItemClick: (item: string) => void;
-  totalItems: number;
+  item: string
+  index: number
+  mouseX: any
+  onItemClick: (item: string) => void
+  totalItems: number
 }) {
-  const ref = useRef<HTMLLIElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const ref = useRef<HTMLLIElement>(null)
+  const [isHovered, setIsHovered] = useState(false)
 
   const distance = useTransform(mouseX, (val) => {
-    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-    return (val as number) - bounds.x - bounds.width / 2;
-  });
+    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 }
+    return (val as number) - bounds.x - bounds.width / 2
+  })
 
-  const yTransform = useTransform(distance, [-200, 0, 200], [0, -12, 0]);
-  const scaleTransform = useTransform(distance, [-200, 0, 200], [1, 1.15, 1]);
-  const rotateTransform = useTransform(distance, [-200, 0, 200], [-3, 0, 3]);
+  const yTransform = useTransform(distance, [-200, 0, 200], [0, -12, 0])
+  const scaleTransform = useTransform(distance, [-200, 0, 200], [1, 1.15, 1])
+  const rotateTransform = useTransform(distance, [-200, 0, 200], [-3, 0, 3])
 
-  const y = useSpring(yTransform, { stiffness: 300, damping: 30 });
-  const scale = useSpring(scaleTransform, { stiffness: 300, damping: 30 });
-  const rotate = useSpring(rotateTransform, { stiffness: 300, damping: 30 });
+  const y = useSpring(yTransform, { stiffness: 300, damping: 30 })
+  const scale = useSpring(scaleTransform, { stiffness: 300, damping: 30 })
+  const rotate = useSpring(rotateTransform, { stiffness: 300, damping: 30 })
 
   const gradientColors = [
     "from-blue-500 to-purple-500 dark:from-cyan-400 dark:to-blue-400",
@@ -81,9 +71,9 @@ function AnimatedNavItem({
     "from-blue-400 to-purple-600 dark:from-blue-400 dark:to-indigo-400",
     "from-purple-400 to-pink-600 dark:from-violet-400 dark:to-fuchsia-400",
     "from-blue-600 to-purple-400 dark:from-teal-400 dark:to-cyan-400",
-  ];
+  ]
 
-  const currentGradient = gradientColors[index % gradientColors.length];
+  const currentGradient = gradientColors[index % gradientColors.length]
 
   return (
     <motion.li ref={ref} style={{ y, scale, rotate }} className="relative">
@@ -95,9 +85,7 @@ function AnimatedNavItem({
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
         style={{
-          filter: isHovered
-            ? "drop-shadow(0 0 10px rgba(34, 211, 238, 0.5))"
-            : "none",
+          filter: isHovered ? "drop-shadow(0 0 10px rgba(34, 211, 238, 0.5))" : "none",
         }}
       />
 
@@ -129,11 +117,7 @@ function AnimatedNavItem({
           }}
         />
 
-        <motion.span
-          className={`relative z-10 ${
-            isHovered ? "text-primary-600 dark:text-cyan-300" : ""
-          }`}
-        >
+        <motion.span className={`relative z-10 ${isHovered ? "text-primary-600 dark:text-cyan-300" : ""}`}>
           {item.split("").map((char, charIndex) => (
             <motion.span
               key={charIndex}
@@ -206,17 +190,17 @@ function AnimatedNavItem({
         />
       </motion.button>
     </motion.li>
-  );
+  )
 }
 
 function MobileNav({
   items,
   onItemClick,
 }: {
-  items: string[];
-  onItemClick: (item: string) => void;
+  items: string[]
+  onItemClick: (item: string) => void
 }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const gradientColors = [
     "from-blue-500 to-purple-500 dark:from-cyan-400 dark:to-blue-400",
@@ -224,7 +208,7 @@ function MobileNav({
     "from-blue-400 to-purple-600 dark:from-blue-400 dark:to-indigo-400",
     "from-purple-400 to-pink-600 dark:from-violet-400 dark:to-fuchsia-400",
     "from-blue-600 to-purple-400 dark:from-teal-400 dark:to-cyan-400",
-  ];
+  ]
 
   return (
     <ul className="flex sm:hidden justify-center custom-media  space-x-2 text-[13px] sm:text-[16px]">
@@ -232,8 +216,8 @@ function MobileNav({
         <motion.li key={item} className="relative">
           <motion.button
             onClick={() => {
-              setActiveIndex(index);
-              onItemClick(item.toLowerCase());
+              setActiveIndex(index)
+              onItemClick(item.toLowerCase())
             }}
             className="relative text-gray-700 dark:text-gray-200 font-medium px-2 py-1 rounded-md overflow-hidden"
             whileTap={{ scale: 0.9 }}
@@ -247,9 +231,7 @@ function MobileNav({
             transition={{ duration: 0.2 }}
           >
             <motion.div
-              className={`absolute inset-0 bg-gradient-to-r ${
-                gradientColors[index % gradientColors.length]
-              } opacity-0`}
+              className={`absolute inset-0 bg-gradient-to-r ${gradientColors[index % gradientColors.length]} opacity-0`}
               animate={{
                 opacity: activeIndex === index ? 0.15 : 0,
               }}
@@ -278,9 +260,7 @@ function MobileNav({
 
             <motion.span
               className={`relative z-10 transition-colors duration-300 ${
-                activeIndex === index
-                  ? "text-blue-600 dark:text-cyan-300"
-                  : "text-gray-700 dark:text-gray-200"
+                activeIndex === index ? "text-blue-600 dark:text-cyan-300" : "text-gray-700 dark:text-gray-200"
               }`}
             >
               {item.split("").map((char, charIndex) => (
@@ -348,5 +328,5 @@ function MobileNav({
         </motion.li>
       ))}
     </ul>
-  );
+  )
 }

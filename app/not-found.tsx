@@ -109,14 +109,6 @@ export default function NotFound() {
               Return Home
             </Button>
           </Link>
-          <Button
-            variant="outline"
-            onClick={() => window.history.back()}
-            className="border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 gap-2"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Go Back
-          </Button>
         </motion.div>
       </div>
     </div>

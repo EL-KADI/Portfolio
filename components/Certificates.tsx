@@ -5,10 +5,6 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import Image from "next/image";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import MetaCertificate from "../Images/Meta Certificate.jpg";
-import RouteDiploma from "../Images/Route Certificate.png";
-import MicrosoftCertificate from "../Images/Microsoft Certificate.png";
-import IBMCertificate from "../Images/IBM Certificate.png";
 
 export default function Certificates() {
   const certificates = [
@@ -18,7 +14,7 @@ export default function Certificates() {
       date: "2024",
       description:
         "Professional certificate in front-end development from Meta, covering React and web development principles.",
-      image: MetaCertificate,
+      image: "/Meta Certificate.avif",
       url: "/Pdfs/Meta Diploma.pdf",
     },
     {
@@ -27,7 +23,7 @@ export default function Certificates() {
       date: "2025",
       description:
         "Front-end diploma covering HTML, CSS, JavaScript, and modern frameworks with hands-on training.",
-      image: RouteDiploma,
+      image: "/Route Certificate.webp",
       url: "/Pdfs/Route Diploma.pdf",
     },
     {
@@ -36,7 +32,7 @@ export default function Certificates() {
       date: "2025",
       description:
         "Microsoft-certified training in front-end development using HTML, CSS, and advanced UI/UX design principles.",
-      image: MicrosoftCertificate,
+      image: "/Microsoft Certificate.avif",
       url: "/Pdfs/Microsoft Diploma.pdf",
     },
     {
@@ -45,7 +41,7 @@ export default function Certificates() {
       date: "2025",
       description:
         "IBM-certified training in front-end development with HTML, CSS, JavaScript, React, and UI/UX best practices.",
-      image: IBMCertificate,
+      image: "/IBM Certificate.avif",
       url: "/Pdfs/IBM Diploma.pdf",
     },
   ];
@@ -66,8 +62,8 @@ export default function Certificates() {
   };
 
   return (
-    <div className="w-full">
-      <motion.div
+    <section className="w-full">
+      <motion.header
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -81,34 +77,35 @@ export default function Certificates() {
           Professional certifications that validate my skills and knowledge in
           web development.
         </p>
-      </motion.div>
-      <motion.div
+      </motion.header>
+      <motion.main
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2  gap-8 max-w-4xl mx-auto"
       >
         {certificates.map((certificate, index) => (
-          <motion.div key={index} variants={item}>
+          <motion.article key={index} variants={item}>
             <CardContainer className="inter-var">
               <CardBody className="h-full">
                 <CardItem translateZ="50" className="h-full">
                   <Card className="h-full overflow-hidden border-blue-100 ring-blue-300 ring-1 dark:ring-1 dark:ring-gray-700 dark:border-gray-700 transform transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700">
                     <CardItem translateZ="75" className="w-full">
-                      <div className="relative h-72 w-full overflow-hidden">
+                      <figure className="relative h-72 w-full overflow-hidden">
                         <Image
                           src={certificate.image || "/placeholder.svg"}
-                          alt={certificate.name}
+                          alt={`${certificate.name} - Professional certificate from ${certificate.issuer}`}
                           fill
+                          loading="lazy"
                           className="object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <figcaption className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                           <h3 className="text-white font-bold text-lg">
                             {certificate.name}
                           </h3>
-                        </div>
-                      </div>
+                        </figcaption>
+                      </figure>
                     </CardItem>
                     <CardContent className="p-6">
                       <CardItem
@@ -124,9 +121,9 @@ export default function Certificates() {
                         <p className="text-primary-600 dark:text-primary-400 font-medium">
                           {certificate.issuer}
                         </p>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm">
+                        <time className="text-gray-500 dark:text-gray-400 text-sm">
                           {certificate.date}
-                        </p>
+                        </time>
                       </CardItem>
                       <CardItem
                         translateZ="30"
@@ -154,9 +151,9 @@ export default function Certificates() {
                 </CardItem>
               </CardBody>
             </CardContainer>
-          </motion.div>
+          </motion.article>
         ))}
-      </motion.div>
-    </div>
+      </motion.main>
+    </section>
   );
 }

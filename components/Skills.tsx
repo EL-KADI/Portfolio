@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Github } from "lucide-react";
+import { motion } from "framer-motion"
+import { Card, CardContent } from "@/components/ui/card"
+import { Github } from "lucide-react"
 
 export default function Skills() {
   const skills = [
@@ -47,26 +47,14 @@ export default function Skills() {
             fill="#f2f2f2"
             d="M49.958,96c-0.58,0-1.16-0.078-1.724-0.232l-27.742-7.702c-2.593-0.72-4.495-3.004-4.735-5.685	L9.578,13.077c-0.16-1.813,0.451-3.621,1.677-4.962C12.485,6.77,14.233,6,16.053,6h67.895c1.821,0,3.569,0.771,4.798,2.115	c1.225,1.339,1.837,3.147,1.677,4.959L84.236,82.37c-0.24,2.683-2.145,4.967-4.739,5.686l-27.803,7.709	C51.124,95.921,50.542,96,49.958,96z"
           />
-          <polygon
-            fill="#2b59a1"
-            points="83.947,12.5 77.762,81.792 49.958,89.5 22.231,81.803 16.053,12.5"
-          />
+          <polygon fill="#2b59a1" points="83.947,12.5 77.762,81.792 49.958,89.5 22.231,81.803 16.053,12.5" />
           <path
             fill="#40396e"
             d="M49.958,91c-0.135,0-0.27-0.019-0.401-0.055L21.83,83.249c-0.602-0.167-1.037-0.689-1.093-1.312	l-6.179-69.303c-0.037-0.419,0.104-0.835,0.388-1.146C15.23,11.177,15.632,11,16.053,11h67.895c0.421,0,0.822,0.177,1.106,0.488	c0.284,0.311,0.425,0.726,0.388,1.146l-6.186,69.292c-0.056,0.622-0.491,1.145-1.094,1.312l-27.804,7.709	C50.228,90.982,50.093,91,49.958,91z M23.634,80.635l26.324,7.309l26.402-7.32L82.308,14H17.692L23.634,80.635z"
           />
-          <polygon
-            fill="#2785bd"
-            points="72.467,77.38 77.771,17.957 50,17.957 50,83.608"
-          />
-          <polygon
-            fill="#d9eeff"
-            points="50,43.957 51,47.957 50,51.957 30.94,51.957 30.23,43.957"
-          />
-          <polygon
-            fill="#d9eeff"
-            points="50,26.957 51,30.957 50,34.957 29.441,34.957 28.72,26.957"
-          />
+          <polygon fill="#2785bd" points="72.467,77.38 77.771,17.957 50,17.957 50,83.608" />
+          <polygon fill="#d9eeff" points="50,43.957 51,47.957 50,51.957 30.94,51.957 30.23,43.957" />
+          <polygon fill="#d9eeff" points="50,26.957 51,30.957 50,34.957 29.441,34.957 28.72,26.957" />
           <polygon
             fill="#d9eeff"
             points="51,69.957 50,74.796 32.55,69.967 31.39,56.957 39.92,56.957 40.5,63.397 50,65.957"
@@ -341,11 +329,7 @@ export default function Skills() {
             textAnchor="none"
           >
             <g transform="scale(5.33333,5.33333)">
-              <path
-                d="M0,15h48v17h-24v3h-11v-3h-13z"
-                fillOpacity="0.81176"
-                fill="#d50000"
-              />
+              <path d="M0,15h48v17h-24v3h-11v-3h-13z" fillOpacity="0.81176" fill="#d50000" />
               <path
                 d="M3,29h5v-8h3v8h2v-11h-10zM16,18v14h5v-3h5v-11zM24,26h-3v-5h3zM29,18v11h5v-8h3v8h3v-8h3v8h2v-11z"
                 fill="#ffffff"
@@ -458,7 +442,7 @@ export default function Skills() {
         </svg>
       ),
     },
-  ];
+  ]
 
   const container = {
     hidden: { opacity: 0 },
@@ -468,12 +452,12 @@ export default function Skills() {
         staggerChildren: 0.1,
       },
     },
-  };
+  }
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+  }
 
   return (
     <div className="w-full">
@@ -488,9 +472,8 @@ export default function Skills() {
           Skills
         </h2>
         <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          I've developed expertise in a variety of front-end technologies and
-          tools, allowing me to create modern, responsive, and user-friendly web
-          applications.
+          I've developed expertise in a variety of front-end technologies and tools, allowing me to create modern,
+          responsive, and user-friendly web applications.
         </p>
       </motion.div>
 
@@ -525,9 +508,7 @@ export default function Skills() {
                   >
                     {skill.icon}
                   </motion.div>
-                  <h3 className="font-medium text-gray-900 dark:text-white">
-                    {skill.name}
-                  </h3>
+                  <h3 className="font-medium text-gray-900 dark:text-white">{skill.name}</h3>
                 </CardContent>
               </Card>
             </motion.div>
@@ -535,5 +516,5 @@ export default function Skills() {
         ))}
       </motion.div>
     </div>
-  );
+  )
 }
