@@ -84,7 +84,7 @@ export default function Hero() {
 
   const currentAge = calculateAge(new Date(2002, 3, 5));
   const ageCount = useCountUp(currentAge, 2000, 500);
-  const projectsCount = useCountUp(60, 2500, 700);
+  const projectsCount = useCountUp(70, 2500, 700);
   const certificatesCount = useCountUp(4, 1500, 900);
   const experienceCount = useCountUp(2, 1000, 1100);
 
@@ -298,7 +298,7 @@ export default function Hero() {
             and Next.js. I've completed professional certifications from Meta
             (via Coursera), IBM, and Microsoft, and hold a Front-End Development
             Diploma from Route Academy. Throughout my journey, I've built over
-            60 diverse projects — including e-commerce platforms, portfolio
+            70 diverse projects — including e-commerce platforms, portfolio
             websites, and custom applications inspired by major platforms like
             Facebook and Youtube. I focus on performance, clean code, and
             delivering seamless user experiences that follow the latest web

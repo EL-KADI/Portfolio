@@ -55,6 +55,23 @@ export default function Projects() {
         "Multilingual",
       ],
     },
+{
+  title: "Nomoar Hosting",
+  description: "UI/UX principles and interactive SVG animations. It includes multiple hosting solutions such as shared hosting, VPS, cloud servers, dedicated hosting, and advanced security services, along with a powerful admin panel for flexible service and pricing management. The platform supports more than 4 languages, and page content dynamically adapts to each country’s preferences, ensuring a smooth, scalable, responsive, and visually engaging user experience for both clients and administrators.",
+  image: "/NomoarHosting.avif",
+  url: "https://nomoar-hosting.vercel.app/",
+  code: "https://github.com/EL-KADI/Nomoar-Hosting",
+  tags: [
+    "Figma to Code",
+    "SVG Animations",
+    "Next.js",
+    "TypeScript",
+    "Admin Panel",
+    "Tailwind CSS",
+  ],
+       featured: true,
+}
+,
     {
       title: "Yonna (Social App)",
       description:
@@ -198,7 +215,6 @@ export default function Projects() {
       url: "https://digital-card-creator-nine.vercel.app",
       code: "https://github.com/EL-KADI/Digital-Card-Creator",
       tags: ["Next.js", "Tailwind CSS", "Fabric.js", "Design Tool", "jsPDF"],
-      featured: true,
     },
     {
       title: "Podcast Finder",
@@ -839,6 +855,76 @@ export default function Projects() {
       code: "https://github.com/EL-KADI/FoodDex",
       tags: ["React", "SASS", "Food", "Recipes", "Nutrition"],
     },
+{
+  title: "CreativeStudio Pro",
+  description: "CreativeStudio Pro is a modern Next.js portfolio with animations, interactive galleries, smooth navigation, and responsive design, offering accessibility, SEO optimization, scalable architecture, advanced visuals, and engaging experiences for freelancers, agencies, and professionals seeking a premium online presence, while ensuring performance, reliability, and future-ready technology integration.",
+  image: "/CreativeStudio Pro.avif",
+  url: "https://creative-portfolio-sooty.vercel.app/",
+  code: "https://github.com/EL-KADI/CreativePortfolio",
+  tags: [
+    "Next.js",
+    "CSS Animations",
+    "Creative Portfolio",
+    "Tailwind CSS",
+  ]
+},
+        {
+  title: "Space Gallery",
+  description: "Space Gallery is an interactive 3D solar system built with Next.js and Three.js. It includes planets, orbital mechanics, and smooth camera transitions. Users explore planets through clicks revealing scientific details. The platform supports responsive design, Arabic typography, deep space colors, and accessibility.",
+  image: "/Space Gallery.avif",
+  url: "https://space-gallery-nine.vercel.app/",
+  code: "https://github.com/EL-KADI/SpaceGallery",
+  tags: [
+    "Next.js",
+    "Three.js",
+    "Space Exploration",
+    "Arabic Support",
+    "TypeScript",
+    "Tailwind CSS",
+  ]
+},
+{
+  title: "CyberForge",
+  description: "CyberForge is a Next.js platform blending 3D, AI, and cyberpunk design. It includes holographic scenes, neural demos, labs, and VR previews. An analytics hub tracks activity with charts. Built with React, it delivers performance, responsive layouts, and accessibility.",
+  image: "/CyberForge.avif",
+  url: "https://cyber-forge-tau.vercel.app",
+  code: "https://github.com/EL-KADI/CyberForge",
+  tags: [
+    "Next.js",
+    "Three.js",
+    "WebGL",
+    "Framer Motion",
+    "WebXR",
+    "Tailwind CSS",
+  ]
+},
+{
+  title: "NEXUS",
+  description: "NEXUS is a futuristic 3D website built with Next.js and React Three Fiber. It features immersive animations, interactive elements, WebGL rendering, glass morphism, responsive layouts, TypeScript, Tailwind CSS, and accessibility-first principles for a next-level experience.",
+  image: "/NEXUS.avif",
+  url: "https://nexus-phi-nine.vercel.app",
+  code: "https://github.com/EL-KADI/NEXUS",
+  tags: [
+    "Next.js",
+    "WebGL",
+    "TypeScript",
+    "Tailwind CSS",
+  ]
+},
+{
+  title: "Nexus Dimension",
+  description: "Nexus Dimension is a 3D web experience built with Next.js and React Three Fiber. It showcases interactive technology with hero, services, portfolio, technology, team, and contact. Featuring animated 3D objects, smooth navigation, physics, shaders, and responsive layouts, it delivers a unique journey.",
+  image: "/NexusDimension.avif",
+  url: "https://nexus-dimension.vercel.app",
+  code: "https://github.com/EL-KADI/Nexus-Dimension",
+  tags: [
+    "Next.js",
+    "Three.js",
+    "WebGL",
+    "3D Animation",
+    "Tailwind CSS",
+  ]
+},
     {
       title: "Material Kit 2",
       description:
